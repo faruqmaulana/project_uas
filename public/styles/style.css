@@ -1,0 +1,167 @@
+/* LOAD FILE */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+    --red-color: #ed1f24;
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
+
+/* GENERAL STYLE */
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-sm {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--black-color);
+}
+
+.font-md {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.font-lg {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.title-section-primary {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--red-color);
+}
+
+.title-section-secondary {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--black-color);
+}
+
+/* END OF GENERAL STYLE */
+
+/* NAVBAR STYLE COMPONENTS */
+.active {
+    color: var(--red-color) !important;
+}
+
+.btn-red {
+    width: 118px;
+    height: 50px;
+
+    background: var(--red-color);
+    border-radius: 25px;
+}
+
+.font-black {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.font-white {
+    color: var(--white-color);
+}
+
+/* END OF NAVBAR STYLE */
+
+/* FOOTER STYLE COMPONENTS */
+
+.footer-icons {
+    width: 184px;
+    height: 57px;
+}
+
+.footer-desc-box {
+    width: 257px;
+    height: 55px;
+}
+
+/* END OF FOOTER STYLE */
+
+/* PAGES STYLE */
+
+/* FLIGHTS PAGE */
+
+.jumbotron-box {
+    height: 504px;
+    background-image: url("../assets/jumbotron.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron-font-title {
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.jumbotron-text-box {
+    width: 458px;
+    height: 163px;
+}
+
+.destination-box {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destination-box {
+    margin: 30px 10px;
+}
+
+.img {
+    position: relative;
+    border-radius: 20px;
+    background-color: #333333;
+    margin: 10px 0;
+}
+
+.img-thumbnails {
+    width: 223px;
+    height: 125px;
+    opacity: 0.2;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+.img-thumbnails:hover {
+    opacity: 1;
+}
+
+.destination-font {
+    color: var(--white-color);
+    position: absolute;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.prepare-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+/* END OF FLIGHTS PAGE */
+
+/* END OF PAGES STYLE */
