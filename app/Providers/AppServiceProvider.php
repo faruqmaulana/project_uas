@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Storage;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        
+        \View::composer('partials/footer', function ($view) {
+            $json = Storage::disk('local')->get('footer.json');
+            $data = json_decode($json);
+            $view->with(['data'=>$data]);
+
+    });
     }
 }

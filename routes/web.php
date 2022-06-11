@@ -14,4 +14,10 @@ use App\Http\Controllers\DataController;
 |
 */
 
-Route::get('/', [DataController::class, 'index']);
+Route::get('/',  function () {
+    return view('welcome');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});

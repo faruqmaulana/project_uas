@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class DataController extends Controller
 {
@@ -15,10 +14,7 @@ class DataController extends Controller
     public function index()
     {
 
-        $json = Storage::disk('local')->get('footer.json');
-        $data = json_decode($json);
         
-        return view("welcome",compact('data'));
     }
 
     /**
