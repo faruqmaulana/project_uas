@@ -25,6 +25,11 @@ a {
     font-weight: 400;
 }
 
+.font-extra-sm {
+    font-size: 12px;
+    line-height: 15px;
+}
+
 .font-sm {
     font-size: 14px;
     line-height: 17px;
@@ -53,6 +58,10 @@ a {
     font-size: 36px;
     line-height: 44px;
     color: var(--black-color);
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 /* END OF GENERAL STYLE */
@@ -101,6 +110,7 @@ a {
 
 .jumbotron-box {
     height: 504px;
+    width: --webkit-fill-available;
     background-image: url("../assets/jumbotron.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -163,5 +173,22 @@ a {
 }
 
 /* END OF FLIGHTS PAGE */
+
+/* ABOUT PAGE */
+
+.about-logo {
+    width: 411px;
+    height: 127px;
+}
+
+.img-responsive {
+    width: -webkit-fill-available;
+}
+
+.star-icons {
+    width: 14px;
+    height: 14px;
+}
+/* END OF ABOUT PAGE */
 
 /* END OF PAGES STYLE */
