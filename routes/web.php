@@ -15,11 +15,11 @@ use App\Http\Controllers\DataController;
 */
 
 Route::get('/',  function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 Route::get('/about', function () {
-    return view('about');
+  return view('about');
 });
 
 Route::get('/help', function () {
