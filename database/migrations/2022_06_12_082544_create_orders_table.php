@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_user');
-            $table->foreignId('id_ticket');
+            $table->foreignId('user_id');
+            $table->foreignId('ticket_id');
             $table->timestamp('tanggal_pesan');
             $table->integer('harga');
             $table->timestamps();
