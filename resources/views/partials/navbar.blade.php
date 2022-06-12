@@ -18,7 +18,7 @@
             <a class="nav-link font-md font-regular" href="/about">ABOUT</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link font-md font-regular" href="#">HELP</a>
+            <a class="nav-link font-md font-regular" href="/help">HELP</a>
         </li>
         </ul>
     </div>
