@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('flight_routes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_airline');
+            $table->string('asal');
+            $table->string('tujuan');
+            $table->integer('harga');
             $table->timestamps();
         });
     }
