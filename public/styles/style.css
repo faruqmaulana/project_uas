@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--red-color);
+}
+
 .font-bold {
     font-weight: 600;
 }
@@ -64,9 +68,20 @@ a {
     text-align: justify;
 }
 
+.btn:hover {
+    color: var(--red-color);
+    border-color: var(--red-color);
+}
+
 /* END OF GENERAL STYLE */
 
 /* NAVBAR STYLE COMPONENTS */
+
+.nav-link:focus,
+.nav-link:hover {
+    color: rgb(255 0 0 / 70%);
+}
+
 .active {
     color: var(--red-color) !important;
 }
@@ -190,5 +205,13 @@ a {
     height: 14px;
 }
 /* END OF ABOUT PAGE */
+
+/* HELP PAGE */
+
+.btn-md:hover {
+    color: var(--white-color) !important;
+}
+
+/* END OF HELP PAGE */
 
 /* END OF PAGES STYLE */
