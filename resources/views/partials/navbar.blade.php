@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-success shadow py-4 sticky-top bg-white shadow">
+<nav class="navbar navbar-expand-lg navbar-success py-2 sticky-top bg-white shadow">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img src="assets/logo.png" alt="" width="184" height="57">
@@ -9,16 +9,16 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-3">
         <li class="nav-item">
-            <a class="nav-link font-md font-regular active" href="/">HOME</a>
+            <a class="nav-link font-md font-regular {{$active === 'Home' ? 'active' : ''}}" href="/">HOME</a>
         </li> 
         <li class="nav-item">
-            <a class="nav-link font-md font-regular" href="#">FLIGHTS</a>
+            <a class="nav-link font-md font-regular {{$active === 'Flight' ? 'active' : ''}}" href="#">FLIGHTS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link font-md font-regular" href="/about">ABOUT</a>
+            <a class="nav-link font-md font-regular {{$active === 'About' ? 'active' : ''}}" href="/about">ABOUT</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link font-md font-regular" href="/help">HELP</a>
+            <a class="nav-link font-md font-regular {{$active === 'Help' ? 'active' : ''}}" href="/help">HELP</a>
         </li>
         </ul>
     </div>

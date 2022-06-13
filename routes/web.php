@@ -15,14 +15,27 @@ use App\Http\Controllers\DataController;
 */
 
 Route::get('/',  function () {
-  return view('welcome');
+  return view('home', [
+    'active' => 'Home'
+  ]);
 });
 
+Route::get('/flight', function () {
+  return view('flight', [
+    'active' => 'Flight'
+  ]);
+});
+
+
 Route::get('/about', function () {
-  return view('about');
+  return view('about', [
+    'active' => 'About'
+  ]);
 });
 
 Route::get('/help', function () {
-  return view('help');
+  return view('help', [
+    'active' => 'Help'
+  ]);
 });
  

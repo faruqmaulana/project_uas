@@ -4,9 +4,9 @@
   <!-- Support Center Section -->
 
 <section>
-  <div class="container mt-5">
+  <div class="container mt-5 px-5">
     <p class="title-section-primary">Support Center</p>
-    <p class="title-section-secondary">Chat Directly With Our Representative</p>
+    <p class="title-section-secondary" style="btn:hover{color: var(--white-color)}">Chat Directly With Our Representative</p>
     <div class="row ">
 
       <div class="col-6 ">
@@ -18,7 +18,7 @@
               <p class="fw-lighter fs-6 my-0" ><small>costumer service</small></p>
             </div>
             <div class="d-flex flex-column justify-content-center mx-4">
-              <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4">Chat</button>
+              <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
             </div>          
         </div>
         
@@ -29,7 +29,7 @@
             <p class="fw-lighter fs-6 my-0" ><small>costumer service</small></p>
           </div>
           <div class="d-flex flex-column justify-content-center mx-4">
-            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4">Chat</button>
+            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
           </div>   
         </div>
 
@@ -40,7 +40,7 @@
             <p class="fw-lighter fs-6 my-0" ><small>costumer service</small></p>
           </div>
           <div class="d-flex flex-column justify-content-center mx-4">
-            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4">Chat</button>
+            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
           </div>   
         </div>
         
@@ -51,7 +51,7 @@
             <p class="fw-lighter fs-6 my-0" ><small>costumer service</small></p>
           </div>
           <div class="d-flex flex-column justify-content-center mx-4">
-            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4">Chat</button>
+            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
           </div>   
         </div>        
       </div>
@@ -68,7 +68,7 @@
 
 <!-- Feedback Section -->
 <section>
-  <div class="container mt-5">
+  <div class="container mt-5 px-5">
     <p class="title-section-primary">Feedback</p>
     <p class="title-section-secondary">Send Your Feedback Here</p>
     <div class="row d-flex flex-column justify-content-center">
@@ -77,7 +77,7 @@
       </div>
       <div class="col d-flex flex-column align-items-end">
         <div class="mt-4">
-          <button type="button" class="rounded-pill btn-md btn btn-danger px-4">SEND</button>
+          <button type="button" class="btn btn-red font-md font-white font-bold px-4">SEND</button>
         </div> 
       </div>
     </div>      

@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Airline extends Model
 {
     use HasFactory;
+
+    public function flightRoute(){
+        return $this->belongsToMany(FlightRoute::class);
+    }
 }
