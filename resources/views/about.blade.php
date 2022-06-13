@@ -3,8 +3,9 @@
 
 <!-- Desc Section -->
 <section>
-    <div class="container py-5" id="aboutUs">
-        <p class="title-section-primary">About Us</p>
+    <div class="container" >
+        <span id="aboutUs"></span>
+        <p class="title-section-primary pt-5">About Us</p>
         <div class="d-flex align-items-center justify-content-center flex-column pb-1">
             <img src="/assets/logo.png" class="about-logo mb-5" alt="plane-logo">
             <p class="title-section-primary" style="color: var(--black-color)">PT. Tiketku,inc.</p>
@@ -13,8 +14,8 @@
             </p>
             <p class="font-sm text-justify">Dignissim cras tincidunt lobortis feugiat vivamus at. Enim diam vulputate ut pharetra sit amet aliquam id. Ut pharetra sit amet aliquam id. Quis auctor elit sed vulputate mi sit amet. Fermentum iaculis eu non diam phasellus vestibulum lorem. Purus sit amet luctus venenatis lectus magna fringilla. Nunc non blandit massa enim nec dui nunc mattis. A arcu cursus vitae congue. Eget mi proin sed libero enim sed faucibus turpis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Velit sed ullamcorper morbi tincidunt ornare massa eget. Commodo nulla facilisi nullam vehicula. Mauris pharetra et ultrices neque ornare aenean euismod elementum. Nibh sed pulvinar proin gravida hendrerit. Hendrerit gravida rutrum quisque non tellus orci. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus.</p>
         </div>
-        <p class="title-section-primary mt-5">Why Tiketku?</p>
-        <div class="row align-items-center">
+        <p class="title-section-primary pt-5" id="whyTicket">Why Tiketku?</p>
+        <div class="row align-items-center pb-5">
             <div class="col-sm-4 col-12">
                 <div class="d-flex flex-column pr-5">
                     <p class="title-section-secondary">What Our Customer Say About Us</p>
@@ -39,7 +40,7 @@
 
 <!-- FAQ Section -->
 <section>
-    <div class="container pt-5 pb-4" id="FAQ">
+    <div class="container py-5" id="FAQ">
         <p class="title-section-primary py-2">FAQ</p>
         <p class="title-section-secondary">Frequently Asked Question</p>
     </div>

@@ -214,6 +214,7 @@ a:hover {
 
 .btn-md:hover {
     color: var(--white-color) !important;
+    background: var(--red-color);
 }
 
 /* END OF HELP PAGE */
