@@ -3,7 +3,7 @@
 
 <!-- Desc Section -->
 <section>
-    <div class="container py-5">
+    <div class="container py-5" id="aboutUs">
         <p class="title-section-primary">About Us</p>
         <div class="d-flex align-items-center justify-content-center flex-column pb-1">
             <img src="/assets/logo.png" class="about-logo mb-5" alt="plane-logo">
@@ -15,7 +15,7 @@
         </div>
         <p class="title-section-primary mt-5">Why Tiketku?</p>
         <div class="row align-items-center">
-            <div class="col-sm-4 col-12 mt-4">
+            <div class="col-sm-4 col-12">
                 <div class="d-flex flex-column pr-5">
                     <p class="title-section-secondary">What Our Customer Say About Us</p>
                     <p class="font-sm">“I am a traveller and tiketku helped me so much in finding attractive tourist destinations and worth the price. Recommend it!</p>
@@ -39,7 +39,7 @@
 
 <!-- FAQ Section -->
 <section>
-    <div class="container pt-5 pb-4">
+    <div class="container pt-5 pb-4" id="FAQ">
         <p class="title-section-primary py-2">FAQ</p>
         <p class="title-section-secondary">Frequently Asked Question</p>
     </div>

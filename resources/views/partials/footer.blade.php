@@ -1,3 +1,7 @@
+<?php
+    $urlPath = $_SERVER['REQUEST_URI'];
+?>
+
 <footer>
     <div class="container pt-5">
         <div class="row" style="height: 201px;">
@@ -13,7 +17,7 @@
                           {{ $footer -> name}}
                         </p>
                     @foreach($footer -> subNavigation as $sub)
-                    <a href="{{$sub -> link}}">
+                    <a href="{{ str_replace($urlPath, '', $sub->link) }}">
                         <p class="font-sm font-regular">
                             {{ $sub -> name}}
                         </p>
