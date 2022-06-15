@@ -45,3 +45,8 @@ Route::get('/flightsearch', function () {
     'active' => 'Flight'
   ]);
 });
+
+
+Route::get('/order/eticket', function () {
+  return view('order.eticket');
+});
