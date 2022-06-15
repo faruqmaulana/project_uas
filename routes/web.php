@@ -38,4 +38,14 @@ Route::get('/help', function () {
     'active' => 'Help'
   ]);
 });
- 
+
+
+Route::get('/flightsearch', function () {
+  return view('flightSearch', [
+    'active' => 'Flight'
+  ]);
+});
+
+Route::get('/order/eticket', function () {
+  return view('order.eticket');
+});
