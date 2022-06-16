@@ -49,3 +49,7 @@ Route::get('/flightsearch', function () {
 Route::get('/order/eticket', function () {
   return view('order.eticket');
 });
+
+Route::get('/review', function () {
+  return view('order.review');
+});
