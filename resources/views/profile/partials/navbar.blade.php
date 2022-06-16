@@ -12,7 +12,7 @@
             <a class="nav-link font-md font-regular {{$active === 'Home' ? 'active' : ''}}" href="/">HOME</a>
         </li> 
         <li class="nav-item">
-            <a class="nav-link font-md font-regular {{$active === 'Flight' ? 'active' : ''}}" href="/flight">FLIGHTS</a>
+            <a class="nav-link font-md font-regular {{$active === 'Flight' ? 'active' : ''}}" href="#">FLIGHTS</a>
         </li>
         <li class="nav-item">
             <a class="nav-link font-md font-regular {{$active === 'About' ? 'active' : ''}}" href="/about">ABOUT</a>
@@ -23,12 +23,17 @@
         </ul>
     </div>
     <div class="collapse navbar-collapse justify-content-end flex-grow-0 gap-4" id="navbarNav">  
-      <a href="#" class="font-md font-black font-bold">
-        Login
-      </a>
-      <a href="#">
-        <button class="btn btn-red font-md font-white font-bold">Register</button>
-      </a>
+      <div class="dropdown">
+        <a class=" btn-secondary dropdown-toggle bg-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: black; font-size:1.5rem">
+          <button class="btn btn-red font-md font-white font-bold mx-3">MR</button>
+        </a>
+    
+        <ul class="dropdown-menu my-3" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

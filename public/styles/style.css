@@ -5,6 +5,7 @@
     --red-color: #ed1f24;
     --white-color: #ffffff;
     --black-color: #000000;
+    --select-color: #d9d9d9;
 }
 
 /* GENERAL STYLE */
@@ -23,6 +24,10 @@ a {
 
 a:hover {
     color: var(--red-color);
+}
+
+.font-bold-xl {
+    font-weight: 700;
 }
 
 .font-bold {
@@ -77,6 +82,27 @@ a:hover {
     border-color: var(--red-color);
 }
 
+/* SELECT BOX */
+.form-select-lg {
+    width: 300px;
+    height: 82px;
+    background-color: var(--select-color);
+}
+
+/* .select-option {
+    width: 335px;
+    height: 82px;
+} */
+
+/* SELECT DATE */
+input[type="date"].form-control,
+input[type="datetime-local"].form-control,
+input[type="month"].form-control,
+input[type="time"].form-control {
+    width: 300px;
+    height: 82px;
+}
+
 /* END OF GENERAL STYLE */
 
 /* NAVBAR STYLE COMPONENTS */
@@ -95,7 +121,12 @@ a:hover {
     height: 50px;
 
     background: var(--red-color);
-    border-radius: 25px;
+    border-radius: 50px;
+}
+
+.btn-search {
+    width: 240px !important;
+    height: 71px;
 }
 
 .font-black {
@@ -220,3 +251,19 @@ a:hover {
 /* END OF HELP PAGE */
 
 /* END OF PAGES STYLE */
+
+/* FLIGHTS PAGE */
+
+.flight-icons {
+    object-fit: contain;
+    width: 25%;
+    padding: 10px 30px;
+}
+
+.flight-icons-japan {
+    object-fit: contain;
+    width: 50%;
+    padding: 10px 30px;
+}
+
+/* END OF FLIGHTS PAGE */
