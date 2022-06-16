@@ -12,7 +12,7 @@
             <a class="nav-link font-md font-regular {{$active === 'Home' ? 'active' : ''}}" href="/">HOME</a>
         </li> 
         <li class="nav-item">
-            <a class="nav-link font-md font-regular {{$active === 'Flight' ? 'active' : ''}}" href="#">FLIGHTS</a>
+            <a class="nav-link font-md font-regular {{$active === 'Flight' ? 'active' : ''}}" href="/flight">FLIGHTS</a>
         </li>
         <li class="nav-item">
             <a class="nav-link font-md font-regular {{$active === 'About' ? 'active' : ''}}" href="/about">ABOUT</a>
@@ -23,7 +23,7 @@
         </ul>
     </div>
     <div class="collapse navbar-collapse justify-content-end flex-grow-0 gap-4" id="navbarNav">  
-      <a href="" class="font-md font-black font-bold">
+      <a href="#" class="font-md font-black font-bold">
         Login
       </a>
       <a href="#">
