@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-success py-2 sticky-top bg-white shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-success py-2 sticky-top bg-white shadow">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img src="assets/logo.png" alt="" width="184" height="57">
