@@ -65,3 +65,10 @@ Route::get('/my-profile', function () {
     'tittle' => 'My Profile'
   ]);
 });
+
+Route::get('/my-profile-setting', function () {
+  return view('profile.my-profile-setting',[
+    'active' => 'Flight',
+    'tittle' => 'My Profile'
+  ]);
+});
