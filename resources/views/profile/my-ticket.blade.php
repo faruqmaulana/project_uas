@@ -51,13 +51,8 @@
             </div>
           </div>
           <div class="col-1 my-auto" style="width: 1rem">
-<<<<<<< HEAD
-            <a href="#" class="btn btn-default"  role="button" aria-disabled="true">              
-              <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center">          
-=======
             <a href="">
               <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center trash-btn">          
->>>>>>> dev-faruq
             </a>
           </div>
         </div>
