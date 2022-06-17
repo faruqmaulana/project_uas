@@ -213,5 +213,5 @@
           </div>
         </div>
       </div >
-      <!-- end My Tickets Section -->
+      <!-- end My Ticketss Section -->
 @endsection
