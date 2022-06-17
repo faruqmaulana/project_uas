@@ -39,17 +39,33 @@ Route::get('/help', function () {
   ]);
 });
 
-
 Route::get('/flightsearch', function () {
   return view('flightSearch', [
     'active' => 'Flight'
   ]);
 });
 
+Route::get('/login', function(){
+  return view('login');
+});
+
 Route::get('/order/eticket', function () {
   return view('order.eticket');
 });
-
-Route::get('/review', function () {
+Route::get('/order/review', function () {
   return view('order.review');
+});
+
+Route::get('/my-ticket', function () {
+  return view('profile.my-ticket',[
+    'active' => 'Flight',
+    'tittle' => 'My Ticket'
+  ]);
+});
+
+Route::get('/my-profile', function () {
+  return view('profile.my-profile',[
+    'active' => 'Flight',
+    'tittle' => 'My Profile'
+  ]);
 });
