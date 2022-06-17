@@ -45,3 +45,7 @@ Route::get('/flightsearch', function () {
     'active' => 'Flight'
   ]);
 });
+
+Route::get('/login', function(){
+  return view('login');
+});
