@@ -13,7 +13,7 @@
 <section>
     <div class="row">
         <div class="col">
-            coloumn
+            coloumn jadi
         </div>
         <div class="col">
             coloumn
