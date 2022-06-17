@@ -6,6 +6,9 @@
     --white-color: #ffffff;
     --black-color: #000000;
     --select-color: #d9d9d9;
+    --gray: rgba(0, 0, 0, 0.7);
+    --gray-secondary: #858585;
+    --gray-profile: rgba(217, 217, 217, 0.4);
 }
 
 /* GENERAL STYLE */
@@ -26,16 +29,20 @@ a:hover {
     color: var(--red-color);
 }
 
-.font-bold-xl {
-    font-weight: 700;
+.font-regular {
+    font-weight: 400;
+}
+
+.font-semi-bold {
+    font-weight: 500;
 }
 
 .font-bold {
     font-weight: 600;
 }
 
-.font-regular {
-    font-weight: 400;
+.font-bold-xl {
+    font-weight: 700;
 }
 
 .font-extra-sm {
@@ -57,6 +64,11 @@ a:hover {
 .font-lg {
     font-size: 20px;
     line-height: 24px;
+}
+
+.font-lg-xl {
+    font-size: 32px;
+    line-height: 39px;
 }
 
 .title-section-primary {
@@ -81,6 +93,39 @@ a:hover {
     color: var(--red-color);
     border-color: var(--red-color);
 }
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* CLASS COLOR */
+
+.font-black {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.font-white {
+    color: var(--white-color);
+}
+
+.color-red {
+    color: var(--red-color);
+}
+
+.color-gray {
+    color: var(--gray);
+}
+
+.color-gray-secondary {
+    color: var(--gray-secondary);
+}
+
+/* END OF CLASS COLOR */
 
 /* SELECT BOX */
 .form-select-lg {
@@ -127,15 +172,6 @@ input[type="time"].form-control {
 .btn-search {
     width: 240px !important;
     height: 71px;
-}
-
-.font-black {
-    text-decoration: none;
-    color: var(--black-color);
-}
-
-.font-white {
-    color: var(--white-color);
 }
 
 /* END OF NAVBAR STYLE */
@@ -267,3 +303,38 @@ input[type="time"].form-control {
 }
 
 /* END OF FLIGHTS PAGE */
+
+/* PROFILE PAGE */
+
+.trash-btn {
+    transition: all 0.5s;
+}
+
+.trash-btn:hover {
+    transform: scale(1.1);
+}
+
+.email-box {
+    width: 354px;
+    height: 271px;
+    border-radius: 5px;
+}
+
+.bg-gray-profile {
+    background: var(--gray-profile);
+}
+
+.accordion-profile.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ed1f24'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-profile:not(.collapsed) {
+    background-color: var(--gray-profile) !important;
+    color: var(--black-color) !important;
+}
+
+.accordion-profile:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ed1f24'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* END OF PROFILE PAGE */
