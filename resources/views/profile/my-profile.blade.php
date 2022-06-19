@@ -1,29 +1,35 @@
 @extends('profile.layouts.main')
 
 @section('container')
- <section>
-  <div class="container mt-5 px-5">
-    <div class="row">
-      <div class="col-3">
-        <h1 class="fw-bold h4">Muhammad Adrian Ronaldy</h1>
-        <div class="navigate mt-5">
-          <a href="/my-profile" class="btn  btn-lg mb-3 d-flex justify-content-start" tabindex="-1" role="button" aria-disabled="true" style="width:15rem; {{$tittle === 'My Profile' ? 'background-color:#ed1f24' : ''}}">
-            <img src="assets/my-ticket/{{$tittle === 'My Profile' ? 'profile-white' : 'profile-black'}}.png" style="width: 35px" alt="" class="align-self-center">
-            <p class="d-inline ms-3 my-1 align-self-center fw-bold {{$tittle === 'My Profile' ? 'text-white' : 'text-black'}}"><small class=""> My Profile</small></p>
-          </a>
-          <a href="/my-ticket" class="btn btn btn-lg  mb-3 d-flex justify-content-start" tabindex="-1" role="button" aria-disabled="true" style="width: 15rem; {{$tittle === 'My Ticket' ? 'background-color:#ed1f24' : ''}} ">
-            <img src="assets/my-ticket/{{$tittle === 'My Ticket' ? 'ticket-white' : 'ticket-black'}}.png" style="width: 35px; text-black"  alt="" class="align-self-center">
-            <p class="d-inline ms-3 my-1 align-self-center fw-bold  {{$tittle === 'My Ticket' ? 'text-white' : 'text-black'}}"><small class=""> My Tickets</small></p>
+  <div class="col">
+    <p class="font-lg-xl font-bold">Detail akun</p>
+    <p class="font-md font-bold color-gray">Disini kamu bisa mengatur detail akunmu</p>
+    <div class="d-flex justify-content-between">
+      <div class="email-box bg-gray-profile d-flex justify-content-between flex-column font-md font-bold p-3">
+        <div>
+          <p class="color-gray">Email</p>
+          <p class="color-gray-secondary">adrianronaldy@gmail.com</p>
+        </div>
+        <div>
+          <hr>
+          <a href="/my-profile-setting" class="d-flex justify-content-end">
+            <p class="color-red" style="margin-bottom: 7px;">PENGATURAN AKUN</p>
           </a>
         </div>
       </div>
-      <div class="col">
-        <img src="assets/my-ticket/line-vertikal.png" alt="">
-      </div>
-      <div class="col">
-        
-      </div>
+      <form action="" method="" style="width: 410px;">
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control" value="Muhammad Adrian Ronaldy">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Citizen ID</label>
+          <input type="text" class="form-control" value="14281937912301980298">
+        </div>
+        <div class="d-flex justify-content-end pt-2">
+          <button type="submit" class="btn btn-red font-md font-white font-bold" style="width: 197px;">Simpan</button>
+        </div>
+      </form>
     </div>
   </div>
- </section>
 @endsection

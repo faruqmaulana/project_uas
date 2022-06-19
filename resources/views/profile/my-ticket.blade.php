@@ -1,30 +1,9 @@
 @extends('profile.layouts.main')
 
 @section('container')
- <section>
-  <div class="container mt-5 px-5">
-    <div class="row">
-      <div class="col-3">
-        <h1 class="fw-bold h4">Muhammad Adrian Ronaldy</h1>
-        <div class="navigate mt-5">
-          <a href="/my-profile" class="btn  btn-lg mb-3 d-flex justify-content-start" tabindex="-1" role="button" aria-disabled="true" style="width:15rem; {{$tittle === 'My Profile' ? 'background-color:#ed1f24' : ''}}">
-            <img src="assets/my-ticket/{{$tittle === 'My Profile' ? 'profile-white' : 'profile-black'}}.png" style="width: 35px" alt="" class="align-self-center">
-            <p class="d-inline ms-3 my-1 align-self-center fw-bold {{$tittle === 'My Profile' ? 'text-white' : 'text-black'}}" style="font-size: 18px"><small class=""> My Profile</small></p>
-          </a>
-          <a href="/my-ticket" class="btn btn-danger btn-lg  mb-3 d-flex justify-content-start" tabindex="-1" role="button" aria-disabled="true" style="width: 15rem; {{$tittle === 'My Ticket' ? 'background-color:#ed1f24' : ''}} ">
-            <img src="assets/my-ticket/{{$tittle === 'My Ticket' ? 'ticket-white' : 'ticket-black'}}.png" style="width: 35px"  alt="" class="align-self-center">
-            <p class="d-inline ms-3 my-1 align-self-center fw-bold  {{$tittle === 'My Ticket' ? 'text-white' : 'text-black'}}" style="font-size: 18px"><small class=""> My Tickets</small></p>
-          </a>
-
-        </div>
-      </div>
-      <div class="col-sm-1" style="width: 3rem">
-        <img src="assets/my-ticket/line-vertikal.png" alt="">
-      </div>
       <!-- My Tickets Section -->
       <div class="col">        
-        <h1 class="text-start fw-bold">My Tickets</h1>
-
+      <h1 class="text-start fw-bold">My Tickets</h1>
         <div class="row mb-4">
           <div class="col">
             <div class="card" style="width: 100%;">
@@ -72,7 +51,9 @@
             </div>
           </div>
           <div class="col-1 my-auto" style="width: 1rem">
-            <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center">          
+            <a href="">
+              <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center trash-btn">          
+            </a>
           </div>
         </div>
 
@@ -122,7 +103,9 @@
             </div>
           </div>
           <div class="col-1 my-auto" style="width: 1rem">
-            <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center">          
+            <a href="">
+              <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center trash-btn">          
+            </a>
           </div>
         </div>
 
@@ -172,7 +155,9 @@
             </div>
           </div>
           <div class="col-1 my-auto" style="width: 1rem">
-            <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center">          
+            <a href="">
+              <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center trash-btn">          
+            </a>
           </div>
         </div>
 
@@ -222,13 +207,11 @@
             </div>
           </div>
           <div class="col-1 my-auto" style="width: 1rem">
-            <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center">          
+            <a href="">
+              <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center trash-btn">          
+            </a>
           </div>
         </div>
-
       </div >
-      <!-- end My Tickets Section -->
-    </div>
-  </div>
- </section>
+      <!-- end My Ticketss Section -->
 @endsection
