@@ -44,7 +44,7 @@
                                         <p style="font-size: 15px">Tangani semua transaksi dan pembayaran dengan cepat dan aman.</p>
                                     </div>
                                 </div>
-                                <div class="row border-bottom border-dark mb-3 mt-1 mb-3">
+                                <div class="row border-bottom border-dark mb-5 mt-1 mb-3">
                                     <div class="col-2 py-3">
                                         <img src="assets/login/jadwal.png" alt="">
                                     </div>
