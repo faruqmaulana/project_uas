@@ -49,6 +49,20 @@ Route::get('/login', function(){
   return view('login');
 });
 
+Route::get('/order', function () {
+  return view('order.contactpassanger', [
+  'active' => 'Order'
+  ]);
+});
+
+Route::get('/login-password', function(){
+  return view('password');
+});
+
+Route::get('/registrasi', function(){
+  return view('daftar');
+});
+
 Route::get('/order/eticket', function () {
   return view('order.eticket');
 });
