@@ -113,7 +113,7 @@
           </div>
         </div>
        
-        {{-- Sriwijaya Air --}}   
+        {{-- Garuda Indoensia --}}   
         <div class="container mb-4">
           <div class="card" style="border-radius: 30px">
             <div class="card-body px-4">
@@ -123,7 +123,7 @@
                   <div class="row">
                     <div class="col">
                       <p>
-                        <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">Sriwijaya Air</span>
+                        <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">Garuda Indonesia</span>
                       </p> 
                     </div>
                     <div class="col">
@@ -138,17 +138,139 @@
                   <div class="row text-center">
                     <div class="col my-auto">
                       <p class="my-auto">
-                        <span class="h2 fw-bold">16:30</span><br><span class="">Jakarta(JKT)</span>
+                        <span class="h2 fw-bold">08:30</span><br><span class="">Jakarta(JKT)</span>
                       </p> 
                     </div>
                     <div class="col my-auto">
-                      <p class="my-auto"><small>1h50m</small></p>
+                      <p class="my-auto"><small>2h45m</small></p>
                       <img src="../assets/review/line.png" width="130px" alt="">
                       <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
                     </div>
                     <div class="col my-auto">
                       <p class="my-auto">
-                        <span class="h2 fw-bold">18:20</span><br><span class="">Tokyo(TKY)</span>
+                        <span class="h2 fw-bold">11:15</span><br><span class="">Tokyo(TKY)</span>
+                      </p> 
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-1 text-center">
+                  <img src="../assets/review/line-vertikal.png" alt="" style="height: 8rem">
+                </div>
+
+                <div class="col-3 my-auto">
+                  <div class="row justify-content-between">
+                    <div class="col">
+                      <p class="h2 fw-bold">$354</p>
+                    </div>
+                    <div class="col ">
+                      <a href="#" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</a>
+                    </div>                    
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{-- Qatar Airways --}}   
+        <div class="container mb-4">
+          <div class="card" style="border-radius: 30px">
+            <div class="card-body px-4">
+              <div class="row">
+
+                <div class="col my-auto">
+                  <div class="row">
+                    <div class="col">
+                      <p>
+                        <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">Qatar Airways</span>
+                      </p> 
+                    </div>
+                    <div class="col">
+                      <p>
+                        <span class="title-available font-bold">Seat Class</span><br><span class="h5 fw-bold">Economy</span>
+                      </p>                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 my-auto">
+                  <div class="row text-center">
+                    <div class="col my-auto">
+                      <p class="my-auto">
+                        <span class="h2 fw-bold">13:02</span><br><span class="">Jakarta(JKT)</span>
+                      </p> 
+                    </div>
+                    <div class="col my-auto">
+                      <p class="my-auto"><small>2h11m</small></p>
+                      <img src="../assets/review/line.png" width="130px" alt="">
+                      <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
+                    </div>
+                    <div class="col my-auto">
+                      <p class="my-auto">
+                        <span class="h2 fw-bold">15:13</span><br><span class="">Tokyo(TKY)</span>
+                      </p> 
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-1 text-center">
+                  <img src="../assets/review/line-vertikal.png" alt="" style="height: 8rem">
+                </div>
+
+                <div class="col-3 my-auto">
+                  <div class="row justify-content-between">
+                    <div class="col">
+                      <p class="h2 fw-bold">$393</p>
+                    </div>
+                    <div class="col ">
+                      <a href="#" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</a>
+                    </div>                    
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{-- Fly Emirates --}}   
+        <div class="container mb-4">
+          <div class="card" style="border-radius: 30px">
+            <div class="card-body px-4">
+              <div class="row">
+
+                <div class="col my-auto">
+                  <div class="row">
+                    <div class="col">
+                      <p>
+                        <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">Fly Emirates</span>
+                      </p> 
+                    </div>
+                    <div class="col">
+                      <p>
+                        <span class="title-available font-bold">Seat Class</span><br><span class="h5 fw-bold">Economy</span>
+                      </p>                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 my-auto">
+                  <div class="row text-center">
+                    <div class="col my-auto">
+                      <p class="my-auto">
+                        <span class="h2 fw-bold">13:02</span><br><span class="">Jakarta(JKT)</span>
+                      </p> 
+                    </div>
+                    <div class="col my-auto">
+                      <p class="my-auto"><small>2h11m</small></p>
+                      <img src="../assets/review/line.png" width="130px" alt="">
+                      <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
+                    </div>
+                    <div class="col my-auto">
+                      <p class="my-auto">
+                        <span class="h2 fw-bold">15:13</span><br><span class="">Tokyo(TKY)</span>
                       </p> 
                     </div>
                   </div>
@@ -174,7 +296,7 @@
           </div>
         </div>
 
-        {{-- Sriwijaya Air --}}   
+        {{-- Air Asia --}}   
         <div class="container mb-4">
           <div class="card" style="border-radius: 30px">
             <div class="card-body px-4">
@@ -184,7 +306,7 @@
                   <div class="row">
                     <div class="col">
                       <p>
-                        <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">Sriwijaya Air</span>
+                        <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">Air Asia</span>
                       </p> 
                     </div>
                     <div class="col">
@@ -199,139 +321,17 @@
                   <div class="row text-center">
                     <div class="col my-auto">
                       <p class="my-auto">
-                        <span class="h2 fw-bold">16:30</span><br><span class="">Jakarta(JKT)</span>
+                        <span class="h2 fw-bold">21:05</span><br><span class="">Jakarta(JKT)</span>
                       </p> 
                     </div>
                     <div class="col my-auto">
-                      <p class="my-auto"><small>1h50m</small></p>
+                      <p class="my-auto"><small>1h26m</small></p>
                       <img src="../assets/review/line.png" width="130px" alt="">
                       <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
                     </div>
                     <div class="col my-auto">
                       <p class="my-auto">
-                        <span class="h2 fw-bold">18:20</span><br><span class="">Tokyo(TKY)</span>
-                      </p> 
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-1 text-center">
-                  <img src="../assets/review/line-vertikal.png" alt="" style="height: 8rem">
-                </div>
-
-                <div class="col-3 my-auto">
-                  <div class="row justify-content-between">
-                    <div class="col">
-                      <p class="h2 fw-bold">$400</p>
-                    </div>
-                    <div class="col ">
-                      <a href="#" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</a>
-                    </div>                    
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {{-- Sriwijaya Air --}}   
-        <div class="container mb-4">
-          <div class="card" style="border-radius: 30px">
-            <div class="card-body px-4">
-              <div class="row">
-
-                <div class="col my-auto">
-                  <div class="row">
-                    <div class="col">
-                      <p>
-                        <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">Sriwijaya Air</span>
-                      </p> 
-                    </div>
-                    <div class="col">
-                      <p>
-                        <span class="title-available font-bold">Seat Class</span><br><span class="h5 fw-bold">Economy</span>
-                      </p>                      
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-4 my-auto">
-                  <div class="row text-center">
-                    <div class="col my-auto">
-                      <p class="my-auto">
-                        <span class="h2 fw-bold">16:30</span><br><span class="">Jakarta(JKT)</span>
-                      </p> 
-                    </div>
-                    <div class="col my-auto">
-                      <p class="my-auto"><small>1h50m</small></p>
-                      <img src="../assets/review/line.png" width="130px" alt="">
-                      <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
-                    </div>
-                    <div class="col my-auto">
-                      <p class="my-auto">
-                        <span class="h2 fw-bold">18:20</span><br><span class="">Tokyo(TKY)</span>
-                      </p> 
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-1 text-center">
-                  <img src="../assets/review/line-vertikal.png" alt="" style="height: 8rem">
-                </div>
-
-                <div class="col-3 my-auto">
-                  <div class="row justify-content-between">
-                    <div class="col">
-                      <p class="h2 fw-bold">$400</p>
-                    </div>
-                    <div class="col ">
-                      <a href="#" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</a>
-                    </div>                    
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {{-- Sriwijaya Air --}}   
-        <div class="container mb-4">
-          <div class="card" style="border-radius: 30px">
-            <div class="card-body px-4">
-              <div class="row">
-
-                <div class="col my-auto">
-                  <div class="row">
-                    <div class="col">
-                      <p>
-                        <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">Sriwijaya Air</span>
-                      </p> 
-                    </div>
-                    <div class="col">
-                      <p>
-                        <span class="title-available font-bold">Seat Class</span><br><span class="h5 fw-bold">Economy</span>
-                      </p>                      
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-4 my-auto">
-                  <div class="row text-center">
-                    <div class="col my-auto">
-                      <p class="my-auto">
-                        <span class="h2 fw-bold">16:30</span><br><span class="">Jakarta(JKT)</span>
-                      </p> 
-                    </div>
-                    <div class="col my-auto">
-                      <p class="my-auto"><small>1h50m</small></p>
-                      <img src="../assets/review/line.png" width="130px" alt="">
-                      <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
-                    </div>
-                    <div class="col my-auto">
-                      <p class="my-auto">
-                        <span class="h2 fw-bold">18:20</span><br><span class="">Tokyo(TKY)</span>
+                        <span class="h2 fw-bold">22:31</span><br><span class="">Tokyo(TKY)</span>
                       </p> 
                     </div>
                   </div>
