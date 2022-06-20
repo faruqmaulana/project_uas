@@ -345,3 +345,17 @@ input[type="time"].form-control {
 }
 
 /* END OF PROFILE PAGE */
+.accordion-setting {
+    background-color: var(--gray-profile);
+}
+
+form i {
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.pass-btn {
+    padding: 10px 10px;
+}
+
+/* END OF PROFILE PAGE */
