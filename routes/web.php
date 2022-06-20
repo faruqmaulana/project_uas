@@ -55,6 +55,14 @@ Route::get('/order', function () {
   ]);
 });
 
+Route::get('/login-password', function(){
+  return view('password');
+});
+
+Route::get('/registrasi', function(){
+  return view('daftar');
+});
+
 Route::get('/order/eticket', function () {
   return view('order.eticket');
 });
