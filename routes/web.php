@@ -49,6 +49,12 @@ Route::get('/login', function(){
   return view('login');
 });
 
+Route::get('/order', function () {
+  return view('order.contactpassanger', [
+  'active' => 'Order'
+  ]);
+});
+
 Route::get('/order/eticket', function () {
   return view('order.eticket');
 });
