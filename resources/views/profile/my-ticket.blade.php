@@ -42,8 +42,7 @@
                     <small>2</small>
                   </p>
                 </div>    
-                <div class="col d-flex flex-column " >
-                  {{-- <button type="button" class="d-flex align-self-center rounded-pill btn-md btn btn-outline-danger px-4 my-auto" style="btn:hover{color: var(--white-color)}; width:140px">Show Detail</button> --}}
+                <div class="col d-flex flex-column " >                  
                   <a href="#" class="d-flex align-self-center rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:140px">Show Detail</a>
                 </div>              
                </div>
