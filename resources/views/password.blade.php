@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,14 @@
                     <a href="#"><img src="assets/login/logo.png" alt=""></a>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            @if(session()->has('LoginError'))
+            <div class="col-5 offset-8 alert alert-danger alert-dismissible fade show" role="alert" style="width: 37%; margin-bottom: -50px;">
+                <strong>{{ session('LoginError') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
         </div>
         <div class="container-fluid pt-1" style="background-color: white; padding-bottom: 320px; margin-top: 4%; background-image: url('assets/login/background.png'); background-repeat:no-repeat">
             <div class="container">
@@ -77,24 +86,30 @@
                                             <h4>Email</h4>
                                         </div>
                                         <div class="row" style="font-size: 20px">
-                                            <p>adrianronaldy@gmail.com</p>
+                                            <p> 
+                                               {{ $email }}
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="form-floating mb-3">
-                                            <input type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com">
-                                            <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        Password
+                                    <form action="/login-password" method="POST">
+                                        @csrf
+                                        <div class="row mb-3">
+                                            <div class="form-floating mb-3">
+                                            <input  name="email" value="{{ $email }}" type="hidden" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com">
+                                            <input name="password" type="password" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com" required autofocus>
+                                                <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            Password
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row col-12 mb-3">
-                                        <button type="button" class="btn btn-lg btn-danger rounded-pill" style="margin-left: 11px">Login</button>
-                                    </div>
+                                        <div class="row col-12 mb-3">
+                                            <button type="submit" class="btn btn-lg btn-danger rounded-pill" style="margin-left: 11px">Login</button>
+                                        </div>
+                                    </form> 
                                 </div>
                             </div>
                         </div>
@@ -117,6 +132,7 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
 

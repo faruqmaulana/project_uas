@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\RegisterController;
-
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,9 +47,6 @@ Route::get('/flightsearch', function () {
   ]);
 });
 
-Route::get('/login', function () {
-  return view('login');
-});
 
 Route::get('/order', function () {
   return view('order.contactpassanger', [
@@ -56,9 +54,16 @@ Route::get('/order', function () {
   ]);
 });
 
-Route::get('/login-password', function () {
-  return view('password');
-});
+// Login route
+
+Route::get('/login',[LoginController::class, 'index'] );
+Route::post('/login',[LoginController::class, 'checkEmail'] );
+
+Route::get('/login-password', [LoginController::class, 'passwordLogin']);
+Route::post('/login-password',[LoginController::class, 'authenticate'] );
+
+
+// End of login route
 
 // Register route
 
@@ -84,12 +89,8 @@ Route::get('/my-ticket', function () {
   ]);
 });
 
-Route::get('/my-profile', function () {
-  return view('profile.my-profile', [
-    'active' => 'Flight',
-    'tittle' => 'My Profile'
-  ]);
-});
+Route::get('/my-profile',[ProfileController::class, 'index'] );
+
 
 Route::get('/my-profile-setting', function () {
   return view('profile.my-profile-setting', [

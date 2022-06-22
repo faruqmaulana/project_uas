@@ -8,7 +8,7 @@
       <div class="email-box bg-gray-profile d-flex justify-content-between flex-column font-md font-bold p-3">
         <div>
           <p class="color-gray">Email</p>
-          <p class="color-gray-secondary">adrianronaldy@gmail.com</p>
+          <p class="color-gray-secondary">{{ $profile->email }}</p>
         </div>
         <div>
           <hr>
@@ -20,7 +20,7 @@
       <form action="" method="" style="width: 410px;">
         <div class="mb-3">
           <label class="form-label">Username</label>
-          <input type="text" class="form-control" value="Muhammad Adrian Ronaldy">
+          <input type="text" class="form-control" value="{{ $profile->username }}">
         </div>
         <div class="mb-3">
           <label class="form-label">Citizen ID</label>

@@ -1,3 +1,10 @@
+<?php
+if(session()->has('loginError')){
+    header( "refresh:2;url=/registrasi" );
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +28,11 @@
             <div class="col-5 offset-8 alert alert-success alert-dismissible fade show" role="alert" style="width: 37%; margin-bottom: -50px;">
                 {{ session('success') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
+            @if(session()->has('loginError'))
+            <div class="col-5 offset-8 alert alert-danger alert-dismissible fade show" role="alert" style="width: 37%; margin-bottom: -50px;">
+                <strong>Email tidak belum terdaftar, </strong>{{ session('loginError') }}
             </div>
             @endif
         </div>
@@ -73,15 +85,16 @@
                                             <p>Perjalanan serumu dimulai disini</p>
                                         </div>
                                     </div>
-                                    <form action="">
+                                    <form action="/login" method="POST">
+                                        @csrf
                                         <div class="row mb-3">
                                             <div class="form-floating mb-3">
-                                                <input type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com">
+                                                <input name="email" type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com" required autofocus>
                                                 <label for="floatingInput" style="margin-left: 10px">Email address</label>
                                             </div>
                                         </div>
                                         <div class="row col-12 mb-3">
-                                            <button type="button" class="btn btn-lg btn-danger rounded-pill" style="margin-left: 11px">Selanjutnya</button>
+                                            <button type="submit" class="btn btn-lg btn-danger rounded-pill" style="margin-left: 11px">Selanjutnya</button>
                                         </div>
                                     </form>
                                     <div class="row px-1 mb-3">
