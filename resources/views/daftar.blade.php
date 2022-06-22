@@ -57,75 +57,99 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card col-9 shadow offset-6  border rounded-lg" style="background-color: #D9D9D9">
-                            <div class="card-body mt-2 mb-5" style="padding-left: 40px; padding-right: 40px; padding-top: 10px">
-                                <div class="col">
-                                    <div class="row mb-3 mt-4" style="padding-left: 0px">
-                                        <div class="col">
-                                            <div class="row">
-                                                <div class="col-1">
-                                                    <img src="Assets/login/back.png" alt="">
-                                                </div>
-                                                <div class="col">
-                                                    <h5 style="font-size: 24px">Daftar</h5>
+                        <form action="/registrasi" method="POST">
+                            @csrf
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                            <div class="card col-9 shadow offset-6  border rounded-lg" style="background-color: #D9D9D9">
+                                <div class="card-body mt-2 mb-5" style="padding-left: 40px; padding-right: 40px; padding-top: 10px">
+                                    <div class="col">
+                                        <div class="row mb-3 mt-4" style="padding-left: 0px">
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="col-1">
+                                                        <img src="Assets/login/back.png" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <h5 style="font-size: 24px">Daftar</h5>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="form-floating mb-3">
-                                            <input type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com">
-                                            <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        Email
+                                        <div class="row mb-3">
+                                            <div class="form-floating mb-3">
+                                                <input name="email" type="email" style="background-color: #D9D9D9" class="form-control border-dark @error('email')is-invalid @enderror" id="floatingInput" placeholder="name@example.com" value="{{ old('email') }}" required>
+                                                <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            Email
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="form-floating mb-3">
-                                            <input type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com">
-                                            <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        Nama lengkap
+                                                </label>
+                                                 @error('email')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
                                                     </div>
-                                                </div>
-                                            </label>
+                                                @enderror
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="form-floating mb-3">
-                                            <input type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com">
-                                            <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        Username
+                                        <div class="row mb-3">
+                                            <div class="form-floating mb-3">
+                                                <input name="name" type="text" style="background-color: #D9D9D9" class="form-control border-dark @error('name')is-invalid @enderror" id="floatingInput" placeholder="name@example.com" value="{{ old('name') }}" required>
+                                                <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            Nama lengkap
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="form-floating mb-3">
-                                            <input type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com">
-                                            <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        Password
+                                                </label>
+                                                 @error('name')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
                                                     </div>
-                                                </div>
-                                            </label>
+                                                @enderror
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row col-12 mb-3">
-                                        <button type="button" class="btn btn-lg btn-danger rounded-pill" style="margin-left: 11px">Daftar</button>
+                                        <div class="row mb-3">
+                                            <div class="form-floating mb-3">
+                                                <input name="username" type="text" style="background-color: #D9D9D9" class="form-control border-dark @error('username')is-invalid @enderror" id="floatingInput" placeholder="name@example.com" value="{{ old('username') }}" required>
+                                                <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            Username
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                 @error('username')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="form-floating mb-3">
+                                                <input name="password" type="password" style="background-color: #D9D9D9" class="form-control border-dark @error('password')is-invalid @enderror" id="floatingInput" placeholder="name@example.com" value="{{ old('password') }}" required>
+                                                <label for="floatingInput" style="margin-left: 20px; font-size: 18px">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            Password
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                 @error('password')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="row col-12 mb-3">
+                                            <button type="submit" class="btn btn-lg btn-danger rounded-pill" style="margin-left: 11px">Daftar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,9 +60,12 @@ Route::get('/login-password', function(){
   return view('password');
 });
 
-Route::get('/registrasi', function(){
-  return view('daftar');
-});
+// Register route
+
+Route::get('/registrasi',[RegisterController::class, 'index'] );
+Route::post('/registrasi',[RegisterController::class, 'store'] );
+
+// End of register route
 
 Route::get('/order/eticket', function () {
   return view('order.eticket');
