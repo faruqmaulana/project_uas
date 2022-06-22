@@ -23,10 +23,10 @@
         </ul>
     </div>
     <div class="collapse navbar-collapse justify-content-end flex-grow-0 gap-4" id="navbarNav">  
-      <a href="#" class="font-md font-black font-bold">
+      <a href="/login" class="font-md font-black font-bold">
         Login
       </a>
-      <a href="#">
+      <a href="/registrasi">
         <button class="btn btn-red font-md font-white font-bold">Register</button>
       </a>
     </div>
