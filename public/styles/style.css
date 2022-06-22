@@ -45,6 +45,11 @@ a:hover {
     font-weight: 700;
 }
 
+.font-bold-xxl {
+    font-size: 20px;
+    font-weight: 700;
+}
+
 .font-extra-sm {
     font-size: 12px;
     line-height: 15px;
@@ -141,6 +146,60 @@ a:hover {
     background-color: var(--select-color);
 }
 
+.form-jkt {
+    width: 235px;
+    height: 82px;
+    background-color: var(--select-color);
+}
+
+.form-passanggers {
+    width: 144px;
+    height: 82px;
+    background-color: var(--select-color);
+}
+
+.form-seatclass {
+    width: 207px;
+    height: 82px;
+    background-color: var(--select-color);
+}
+
+.btn-red1 {
+    width: 166px;
+    height: 71px;
+
+    background: var(--red-color);
+    border-radius: 35px;
+}
+
+.btn-redsearch {
+    width: 166px;
+    height: 71px;
+
+    background: var(--red-color);
+    border-radius: 35px;
+}
+
+.font-but {
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.title-available {
+    font-weight: 43px;
+    font-size: 17px;
+    line-height: 29px;
+    color: var(--red-color);
+}
+
+.btn-select {
+    width: 166px;
+    height: 71px;
+
+    /* background: var(--red-color); */
+    border-radius: 35px;
+}
+
 /* .select-option {
     width: 335px;
     height: 82px;
@@ -151,8 +210,9 @@ input[type="date"].form-control,
 input[type="datetime-local"].form-control,
 input[type="month"].form-control,
 input[type="time"].form-control {
-    width: 300px;
+    width: 238px;
     height: 82px;
+    background-color: var(--select-color);
 }
 
 /* END OF GENERAL STYLE */
