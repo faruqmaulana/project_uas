@@ -1,7 +1,11 @@
+<?php
+    $urlPath = $_SERVER["PHP_SELF"];
+?>
+
 <nav class="navbar navbar-expand-lg navbar-success py-2 sticky-top bg-white shadow-sm">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img src="assets/logo.png" alt="" width="184" height="57">
+      <img src="{{ $urlPath === '/index.php/flight/flight-search' ? '../assets/logo.png' : 'assets/logo.png'}}" alt="" width="184" height="57">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

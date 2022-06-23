@@ -28,6 +28,10 @@ class FlightController extends Controller
 
     public function filter(Request $request)
     {
+        $src_city = SourceCity::all();
+        $dst_city = DestCity::all();
+        $class_flight = ClassFlight::all();
+
         $filter = FlightRoute::where([
             ['source_city_id', $request->source_id],
             ['dest_city_id', $request->dest_id],
@@ -36,6 +40,9 @@ class FlightController extends Controller
         ])->get();
 
         return view('flightSearch', [
+            'src_city' => $src_city,
+            'dst_city' => $dst_city,
+            'class_flight' => $class_flight,
             'data' => $filter,
             'active' => 'Flight'
         ]);

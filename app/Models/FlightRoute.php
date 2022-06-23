@@ -16,7 +16,7 @@ class FlightRoute extends Model
 
     public function airline()
     {
-        return $this->belongsToMany(Airline::class);
+        return $this->belongsTo(Airline::class, 'airline_id');
     }
 
     public function source_cities()

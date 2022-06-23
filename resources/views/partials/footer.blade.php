@@ -1,12 +1,13 @@
 <?php
     $urlPath = $_SERVER['REQUEST_URI'];
+    $urlInfo = $_SERVER["PHP_SELF"];
 ?>
 
 <footer>
     <div class="container pt-5">
         <div class="row" style="height: 201px;">
             <div class="col-sm-3 col-12">
-                <img src="assets/logo.png" class="footer-icons" alt="">
+                <img src="{{ $urlInfo === '/index.php/flight/flight-search' ? '../assets/logo.png' : 'assets/logo.png'}}" class="footer-icons" alt="">
                 <p class="font-sm footer-desc-box">We always hope our customer satisfied by providing efficient and easy tools to book a flight</p>
             </div>
             <div class="col-sm-6 col-12 mt-4">

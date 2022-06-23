@@ -13,7 +13,6 @@
                     <label for="from" class="form-label font-md font-bold-xl">From</label>
                     <select class="form-select form-select-lg font-md" id="from" aria-label=".form-select-lg example" name="source_id">
                         @foreach ($src_city as $src)
-                            {{-- <input type="text" name="source_id"> --}}
                             <option class="select-option" value="{{ $src->id }}">{{ $src->source_city_name }}</option>
                         @endforeach
                     </select>
