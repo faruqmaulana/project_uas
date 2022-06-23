@@ -2,9 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\FlightController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Models\ClassFlight;
+use App\Models\DestCity;
+use App\Models\FlightRoute;
+use App\Models\SourceCity;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,12 +28,10 @@ Route::get('/',  function () {
   ]);
 });
 
-Route::get('/flight', function () {
-  return view('flight', [
-    'active' => 'Flight'
-  ]);
-});
+Route::get('/flight', [FlightController::class, 'search']);
 
+Route::get('/flight/flight-search', [FlightController::class, 'filter']);
+// Route::get('/flight/flight-search', [FlightController::class, 'index']);
 
 Route::get('/about', function () {
   return view('about', [
@@ -35,7 +39,7 @@ Route::get('/about', function () {
   ]);
 });
 
-Route::get('/help',[DataController::class, 'help']);
+Route::get('/help', [DataController::class, 'help']);
 
 Route::get('/flightsearch', function () {
   return view('flightSearch', [
@@ -52,20 +56,20 @@ Route::get('/order', function () {
 
 // Login route
 
-Route::get('/login',[LoginController::class, 'index'])->middleware('guest');
-Route::post('/login',[LoginController::class, 'checkEmail'])->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'checkEmail'])->middleware('guest');
 
 Route::get('/login-password', [LoginController::class, 'passwordLogin']);
-Route::post('/login-password',[LoginController::class, 'authenticate'] );
+Route::post('/login-password', [LoginController::class, 'authenticate']);
 
-Route::post('/logout',[LoginController::class, 'logout']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 // End of login route
 
 // Register route
 
-Route::get('/registrasi',[RegisterController::class, 'index'] );
-Route::post('/registrasi',[RegisterController::class, 'store'] );
+Route::get('/registrasi', [RegisterController::class, 'index']);
+Route::post('/registrasi', [RegisterController::class, 'store']);
 
 // End of register route
 Route::get('/registrasi', function () {
@@ -86,8 +90,8 @@ Route::get('/my-ticket', function () {
   ]);
 });
 
-Route::get('/my-profile',[ProfileController::class, 'index'] );
-Route::put('/my-profile',[ProfileController::class, 'updateProfile'] );
+Route::get('/my-profile', [ProfileController::class, 'index']);
+Route::put('/my-profile', [ProfileController::class, 'updateProfile']);
 
 
 Route::get('/my-profile-setting', function () {

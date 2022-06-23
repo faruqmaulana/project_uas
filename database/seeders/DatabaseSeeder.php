@@ -80,7 +80,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         //random flight route
-        FlightRoute::factory(1000)->create();
+        FlightRoute::factory(500)->create();
 
         //seed source city
         SourceCity::create([

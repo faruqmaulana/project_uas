@@ -11,6 +11,6 @@ class ClassFlight extends Model
 
     public function flight_route()
     {
-        return $this->belongsTo(FlightRoute::class);
+        return $this->hasOne(FlightRoute::class);
     }
 }
