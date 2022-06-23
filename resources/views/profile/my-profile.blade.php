@@ -1,7 +1,7 @@
 @extends('profile.layouts.main')
 
 @section('container')
-  <div class="col">
+  <div class="col-8">
     <div class="d-flex align-items-center justify-content-between">
       <div>
         <p class="font-lg-xl font-bold">Detail akun</p>
