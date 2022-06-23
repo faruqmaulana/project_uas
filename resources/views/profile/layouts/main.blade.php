@@ -14,17 +14,18 @@
         @include('profile.partials.profileNav')
     </div>
     @include('partials.footer')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     
     @if(session()->has('updateSuccess'))
     <script>
       $(function(){
               Swal.fire({
               icon: 'success',
-              title: 'Berhasil!',
+              title: 'Update successfully!',
               text: '{{ Session::get("updateSuccess") }}',
               showConfirmButton: false,
               timer: 2000
@@ -32,6 +33,65 @@
       });
       </script>
     @endif
+      <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+    </script>
+
+    <!-- confirm button -->
+    <!-- <script>
+      $('.update-data').click(function(event){
+        event.preventDefault();
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            const id = $("input[name=id]").val();
+            const username = $("input[name=username]").val();
+            window.location = '/my-profile';
+            $.ajax({
+                type: "POST",
+                url: "/my-profile",
+                data: {
+                  id,
+                  username
+                },
+                success: function (data) {
+                      Swal.fire({
+                      icon: 'success',
+                      title: 'Update successfully!',
+                      text: '{{ Session::get("updateSuccess") }}',
+                      showConfirmButton: false,
+                      timer: 2000
+                  })  
+                }         
+            });
+          }
+        })
+      })
+    </script> -->
+
     <!-- <script>
       $(".alert").delay(3000).slideUp(200, function() {
         $(this).alert('close');

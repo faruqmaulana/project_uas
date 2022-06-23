@@ -39,11 +39,10 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function updateProfile(Request $request){
-        // dd($request);
         USER::where('id', $request->id)->update([
             'username' => $request->username,
         ]);
 
-        return redirect('/my-profile')->with('updateSuccess', 'Profile anda berhasil diperbarui!');
+        return back()->with('updateSuccess', 'Your profile has been updated!');
     }
 }
