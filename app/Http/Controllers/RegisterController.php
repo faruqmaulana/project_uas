@@ -7,7 +7,7 @@ use App\Models\User;
 
 class RegisterController extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +16,6 @@ class RegisterController extends Controller
     public function index()
     {
         return view('daftar');
-        
     }
 
     /**
@@ -36,11 +35,11 @@ class RegisterController extends Controller
         ]);
         //hashing password using bcrypt
         $validatedData['password'] = bcrypt($validatedData['password']);
-        
+
         User::create($validatedData);
 
         $request->session()->flash('success', 'Registrasi berhasil! Silahkan login');
-        
+
         return redirect('/login');
     }
 }
