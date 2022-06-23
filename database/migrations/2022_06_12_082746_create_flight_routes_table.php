@@ -16,9 +16,12 @@ return new class extends Migration
         Schema::create('flight_routes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('airline_id');
-            $table->string('asal');
-            $table->string('tujuan');
-            $table->integer('harga');
+            $table->foreignId('source_city_id');
+            $table->foreignId('dest_city_id');
+            $table->dateTime('departure_date');
+            $table->dateTime('arrive_date');
+            $table->string('class_flight_id');
+            $table->integer('price');
             $table->timestamps();
         });
     }
