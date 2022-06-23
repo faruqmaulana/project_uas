@@ -35,11 +35,7 @@ Route::get('/about', function () {
   ]);
 });
 
-Route::get('/help', function () {
-  return view('help', [
-    'active' => 'Help'
-  ]);
-});
+Route::get('/help',[DataController::class, 'help']);
 
 Route::get('/flightsearch', function () {
   return view('flightSearch', [
