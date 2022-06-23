@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
-
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,11 +35,7 @@ Route::get('/about', function () {
   ]);
 });
 
-Route::get('/help', function () {
-  return view('help', [
-    'active' => 'Help'
-  ]);
-});
+Route::get('/help',[DataController::class, 'help']);
 
 Route::get('/flightsearch', function () {
   return view('flightSearch', [
@@ -45,9 +43,6 @@ Route::get('/flightsearch', function () {
   ]);
 });
 
-Route::get('/login', function () {
-  return view('login');
-});
 
 Route::get('/order', function () {
   return view('order.contactpassanger', [
@@ -55,10 +50,24 @@ Route::get('/order', function () {
   ]);
 });
 
-Route::get('/login-password', function () {
-  return view('password');
-});
+// Login route
 
+Route::get('/login',[LoginController::class, 'index'])->middleware('guest');
+Route::post('/login',[LoginController::class, 'checkEmail'])->middleware('guest');
+
+Route::get('/login-password', [LoginController::class, 'passwordLogin']);
+Route::post('/login-password',[LoginController::class, 'authenticate'] );
+
+Route::post('/logout',[LoginController::class, 'logout']);
+
+// End of login route
+
+// Register route
+
+Route::get('/registrasi',[RegisterController::class, 'index'] );
+Route::post('/registrasi',[RegisterController::class, 'store'] );
+
+// End of register route
 Route::get('/registrasi', function () {
   return view('daftar');
 });
@@ -77,12 +86,9 @@ Route::get('/my-ticket', function () {
   ]);
 });
 
-Route::get('/my-profile', function () {
-  return view('profile.my-profile', [
-    'active' => 'Flight',
-    'tittle' => 'My Profile'
-  ]);
-});
+Route::get('/my-profile',[ProfileController::class, 'index'] );
+Route::put('/my-profile',[ProfileController::class, 'updateProfile'] );
+
 
 Route::get('/my-profile-setting', function () {
   return view('profile.my-profile-setting', [

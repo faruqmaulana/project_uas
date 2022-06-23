@@ -1,3 +1,10 @@
+<?php
+if(session()->has('loginError')){
+    header( "refresh:2;url=/registrasi" );
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +17,24 @@
 <body>
     <section>
         <div class="container-fluid pb-2 pt-5" style="background-color: white">
-            <div class="container ">
+            <div class="container">
                 <div class="col-12 d-flex align-items-center justify-content-center flex-column">
-                    <a href="#"><img src="assets/login/logo.png" alt=""></a>
+                    <a href="/"><img src="assets/login/logo.png" alt=""></a>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            @if(session()->has('success'))
+            <div class="col-5 offset-8 alert alert-success alert-dismissible fade show" role="alert" style="width: 37%; margin-bottom: -50px;">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
+            @if(session()->has('loginError'))
+            <div class="col-5 offset-8 alert alert-danger alert-dismissible fade show" role="alert" style="width: 37%; margin-bottom: -50px;">
+                <strong>Email tidak belum terdaftar, </strong>{{ session('loginError') }}
+            </div>
+            @endif
         </div>
         <div class="container-fluid pt-1" style="background-color: white; padding-bottom: 320px; margin-top: 4%; background-image: url('assets/login/background.png'); background-repeat:no-repeat">
             <div class="container">
@@ -65,15 +85,18 @@
                                             <p>Perjalanan serumu dimulai disini</p>
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="form-floating mb-3">
-                                            <input type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com">
-                                            <label for="floatingInput" style="margin-left: 10px">Email address</label>
+                                    <form action="/login" method="POST">
+                                        @csrf
+                                        <div class="row mb-3">
+                                            <div class="form-floating mb-3">
+                                                <input name="email" type="email" style="background-color: #D9D9D9" class="form-control border-dark" id="floatingInput" placeholder="name@example.com" required autofocus>
+                                                <label for="floatingInput" style="margin-left: 10px">Email address</label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row col-12 mb-3">
-                                        <button type="button" class="btn btn-lg btn-danger rounded-pill" style="margin-left: 11px">Selanjutnya</button>
-                                    </div>
+                                        <div class="row col-12 mb-3">
+                                            <button type="submit" class="btn btn-lg btn-danger rounded-pill" style="margin-left: 11px">Selanjutnya</button>
+                                        </div>
+                                    </form>
                                     <div class="row px-1 mb-3">
                                         <div class="col-4 offset-1">
                                             <img src="assets/login/garis.png" alt="">
@@ -135,7 +158,7 @@
                         <h1 class="text-center" style="font-size: 20px">2022 PT.Tiketku. All Right Reserved</h1>
                     </div>
                     <div class="col-12 d-flex align-items-center justify-content-center flex-column">
-                        <a href="#">
+                        <a href="/">
                             <img src="assets/login/logo.png" alt="">
                         </a>
                     </div>
@@ -143,6 +166,7 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
 

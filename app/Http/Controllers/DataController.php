@@ -3,9 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class DataController extends Controller
 {
+
+
+    public function help(){
+        $json = Storage::disk('local')->get('kelompok.json');
+        $data = json_decode($json);
+        
+        return view('help', [
+            'active' => 'Help',
+            'data' => $data
+          ]);
+    }
+
     /**
      * Display a listing of the resource.
      *
