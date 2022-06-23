@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->string('no_kursi');
-            $table->string('kelas');
             $table->dateTime('jadwal');
             $table->timestamps();
         });
