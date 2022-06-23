@@ -7,7 +7,7 @@
             <div class="accordion-item mb-4">
                 <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button accordion-profile collapsed bg-gray-profile font-bold font-lg font-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Bahasa
+                    Name
                 </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">

@@ -35,11 +35,7 @@ Route::get('/about', function () {
   ]);
 });
 
-Route::get('/help', function () {
-  return view('help', [
-    'active' => 'Help'
-  ]);
-});
+Route::get('/help',[DataController::class, 'help']);
 
 Route::get('/flightsearch', function () {
   return view('flightSearch', [
@@ -56,12 +52,13 @@ Route::get('/order', function () {
 
 // Login route
 
-Route::get('/login',[LoginController::class, 'index'] );
-Route::post('/login',[LoginController::class, 'checkEmail'] );
+Route::get('/login',[LoginController::class, 'index'])->middleware('guest');
+Route::post('/login',[LoginController::class, 'checkEmail'])->middleware('guest');
 
 Route::get('/login-password', [LoginController::class, 'passwordLogin']);
 Route::post('/login-password',[LoginController::class, 'authenticate'] );
 
+Route::post('/logout',[LoginController::class, 'logout']);
 
 // End of login route
 
@@ -90,6 +87,7 @@ Route::get('/my-ticket', function () {
 });
 
 Route::get('/my-profile',[ProfileController::class, 'index'] );
+Route::put('/my-profile',[ProfileController::class, 'updateProfile'] );
 
 
 Route::get('/my-profile-setting', function () {
