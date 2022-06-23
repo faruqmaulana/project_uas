@@ -38,17 +38,21 @@ class LoginController extends Controller
         ]);
  
         if (Auth::attempt($credentials)) {
+            
             $request->session()->regenerate();
-            $user = User::where('email', '=', $request->email )->first();
-            $data = [
-                'name' => $user->name,
-                'username' => $user->username,
-                'email' => $user->email
-            ];
-            $array_json = json_encode($user);
-            return redirect()->intended('/my-profile')->cookie('data', $array_json);
+            return redirect()->intended('/my-profile');
         }
  
         return back()->with('LoginError', 'Login Gagal!');
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+ 
+        $request->session()->invalidate();
+     
+        $request->session()->regenerateToken();
+     
+        return redirect('/');
     }
 }
