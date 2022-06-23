@@ -10,7 +10,7 @@
       <p class="jumbotron-text-box nav-fonts mt-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-      <a href="#">
+      <a href="/flight">
         <button class="btn btn-red nav-fonts font-white font-bold mt-5">Book now</button>
       </a>
     </div>
@@ -91,7 +91,7 @@
       Prepare Yourself & Explore The Beauty Of the World
     </p>
     <p class="mt-3 mb-5">Let’s go abroad!</p>
-    <a href="#" class="mb-5">
+    <a href="/flight" class="mb-5">
         <button class="btn btn-red font-md font-white font-bold" style="width: 146px;">GET STARTED</button>
     </a>
   </div>
