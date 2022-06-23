@@ -27,7 +27,7 @@
           </a>
         </div>
       </div>
-      <form action="/my-profile" method="POST" style="width: 410px;">
+      <form method="POST" style="width: 50%; margin-left:20px;" >
         @csrf {!! method_field('PUT') !!}  
         <div class="mb-3">
           <label class="form-label">Username</label>
@@ -39,7 +39,7 @@
           <input type="text" class="form-control" value="14281937912301980298" disabled>
         </div>
         <div class="d-flex justify-content-end pt-2">
-          <button type="submit" class="btn btn-red font-md font-white font-bold" style="width: 197px;">Simpan</button>
+          <button type="submit" class="btn btn-red font-md font-white font-bold update-data" style="width: 197px;">Simpan</button>
         </div>
       </form>
     </div>
