@@ -11,6 +11,6 @@ class DestCity extends Model
 
     public function flight_route()
     {
-        return $this->hasMany(FlightRoute::class);
+        return $this->hasOne(FlightRoute::class);
     }
 }

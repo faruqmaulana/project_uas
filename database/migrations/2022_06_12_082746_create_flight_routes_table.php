@@ -18,9 +18,11 @@ return new class extends Migration
             $table->foreignId('airline_id');
             $table->foreignId('source_city_id');
             $table->foreignId('dest_city_id');
-            $table->dateTime('departure_date');
-            $table->dateTime('arrive_date');
-            $table->string('class_flight_id');
+            $table->date('departure_date');
+            $table->time('departure_time');
+            $table->date('arrive_date');
+            $table->time('arrive_time');
+            $table->foreignId('class_flight_id');
             $table->integer('price');
             $table->timestamps();
         });

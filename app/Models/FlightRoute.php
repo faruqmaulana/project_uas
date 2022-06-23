@@ -19,18 +19,18 @@ class FlightRoute extends Model
         return $this->belongsToMany(Airline::class);
     }
 
-    public function source_city()
+    public function source_cities()
     {
-        return $this->belongsToMany(SourceCity::class);
+        return $this->belongsTo(SourceCity::class, 'source_city_id');
     }
 
-    public function dest_city()
+    public function dest_cities()
     {
-        return $this->belongsToMany(DestCity::class);
+        return $this->belongsTo(DestCity::class, 'dest_city_id');
     }
 
     public function class_flight()
     {
-        return $this->hasOne(ClassFlight::class);
+        return $this->belongsTo(ClassFlight::class, 'class_flight_id');
     }
 }

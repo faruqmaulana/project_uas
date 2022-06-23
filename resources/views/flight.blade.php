@@ -7,32 +7,39 @@
             <p class="title-section-primary">Browse Flights</p>
             <p class="title-section-secondary">Where do you want to go?</p>
         </div>
-        <form>
+        <form action="/flight/flight-search" method="GET">
             <div class="d-flex align-items-center justify-content-center">
                 <div class="mb-3 col-3" style="margin-right: 10%">
                     <label for="from" class="form-label font-md font-bold-xl">From</label>
-                    <select class="form-select form-select-lg font-md" id="from" aria-label=".form-select-lg example">
-                        <option class="select-option" value="1">Jakarta, Indonesia JKT</option>
+                    <select class="form-select form-select-lg font-md" id="from" aria-label=".form-select-lg example" name="source_id">
+                        @foreach ($src_city as $src)
+                            {{-- <input type="text" name="source_id"> --}}
+                            <option class="select-option" value="{{ $src->id }}">{{ $src->source_city_name }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="mb-3 col-3">
                     <label for="from" class="form-label font-md font-bold-xl">To</label>
-                    <select class="form-select form-select-lg font-md" id="from" aria-label=".form-select-lg example">
-                        <option class="select-option" value="1">Tokyo, Japan</option>
+                    <select class="form-select form-select-lg font-md" id="from" aria-label=".form-select-lg example" name="dest_id">
+                        @foreach ($dst_city as $dst)
+                            <option class="select-option" value="{{ $dst->id }}">{{ $dst->dest_city_name }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="mb-3 col-3" style="margin-left: 10%">
                     <div>
                         <label for="from" class="form-label font-md font-bold-xl">Departure Date</label>
-                        <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker">
+                        <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker" name="depart_date">
                     </div>
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center mt-3">
                 <div class="mb-5">
                     <label for="from" class="form-label font-md font-bold-xl">Seat Class</label>
-                    <select class="form-select form-select-lg font-md" id="from" aria-label=".form-select-lg example">
-                        <option class="select-option" value="1">Economy</option>
+                    <select class="form-select form-select-lg font-md" id="from" aria-label=".form-select-lg example" name="class_id">
+                        @foreach ($class_flight as $class)
+                            <option class="select-option" value="{{ $class->id }}">{{ $class->class_name }}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>

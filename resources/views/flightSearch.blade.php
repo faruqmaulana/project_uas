@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('container')
 
+{{-- {{ dd($data) }} --}}
 <section>
     <div class="container mt-5 px-5">
 
@@ -12,34 +13,28 @@
         
         <form>
             <div class="d-flex align-items-center justify-content-between">
-                <div class="p-4">
-                    <label for="from" class="form-label font-md font-bold-xl">From</label>
-                    <select class="form-select form-jkt font-md" id="from" aria-label=".form-jkt">
-                        <option class="select-option" value="1">Jakarta, Indonesia JKT</option>
-                    </select>
-                </div>
-                    <div class="p-1">
-                    <label for="from" class="form-label font-md font-bold-xl">To</label>
-                    <select class="form-select form-jkt font-md" id="from" aria-label=".form-jkt">
-                        <option class="select-option" value="1">Tokyo, Japan</option>
-                    </select>
-                </div>
-                <div class="p-1">
-                    <label for="from" class="form-label font-md font-bold-xl">Departure Date</label>
-                    <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker">
-                </div>
-                <div class="p-1">
-                    <label for="from" class="form-label font-md font-bold-xl">No. Of Passengers</label>
-                    <select class="form-select form-passanggers font-md" id="from" aria-label=".form-passanggers">
-                    <option class="select-option" value="1">2</option>
-                    </select>
-                </div>
-                <div class="p-1">
-                    <label for="from" class="form-label font-md font-bold-xl">Seat Class</label>
-                    <select class="form-select form-seatclass font-md" id="from" aria-label=".form-seatclass">
-                        <option class="select-option" value="1">Economy</option>
-                    </select>
-                </div>
+              <div class="p-4">
+                  <label for="from" class="form-label font-md font-bold-xl">From</label>
+                  <select class="form-select form-jkt font-md" id="from" aria-label=".form-jkt">
+                      <option class="select-option" value="{{ $data[0]->source_cities->id }}">{{ $data[0]->source_cities->source_city_name }}</option>
+                  </select>
+              </div>
+                  <div class="p-1">
+                  <label for="from" class="form-label font-md font-bold-xl">To</label>
+                  <select class="form-select form-jkt font-md" id="from" aria-label=".form-jkt">
+                      <option class="select-option" value="{{ $data[0]->dest_cities->id }}">{{ $data[0]->dest_cities->dest_city_name }}</option>
+                  </select>
+              </div>
+              <div class="p-1">
+                  <label for="from" class="form-label font-md font-bold-xl">Departure Date</label>
+                  <input placeholder="Selected date" type="date" id="date-picker-example" class="form-control datepicker" value="{{ $data[0]->departure_date }}">
+              </div>
+              <div class="p-1">
+                  <label for="from" class="form-label font-md font-bold-xl">Seat Class</label>
+                  <select class="form-select form-seatclass font-md" id="from" aria-label=".form-seatclass">
+                      {{-- <option class="select-option" value="{{ $data[0]->class_flight_id->id }}">{{ $data[0]->class_flight_id->class_name }}</option> --}}
+                  </select>
+              </div>
             </div>
             <div class="d-flex justify-content-center">
                 <button class="btn btn-red1 font-but font-white font-bold btn-redsearch d-flex align-items-center justify-content-center">
