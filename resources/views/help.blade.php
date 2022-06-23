@@ -1,65 +1,31 @@
 @extends('layouts.main')
 @section('container')
-  
+
   <!-- Support Center Section -->
 
 <section>
   <div class="container mt-5 px-5">
     <p class="title-section-primary">Support Center</p>
     <p class="title-section-secondary" style="btn:hover{color: var(--white-color)}">Chat Directly With Our Representative</p>
-    <div class="row ">
-
+    <div class="row d-flex align-items-center justify-content-between">
       <div class="col-6 ">
-
-        <div class="costumer-service d-flex flex-row  mb-4">
-          <img src="assets/support-center/someone.png" alt="" class="img-thumbnail rounded-circle" style="width:66px">                  
-            <div class="d-flex flex-column mx-2 flex-grow-1  justify-content-center">
-              <p class="fw-bold my-0">Gwen Isabella</p>
-              <p class="fw-lighter fs-6 my-0" ><small>costumer service</small></p>
-            </div>
-            <div class="d-flex flex-column justify-content-center mx-4">
-              <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
-            </div>          
-        </div>
-        
-        <div class="costumer-service d-flex flex-row mb-4">
-          <img src="assets/support-center/someone.png" alt="" class="img-thumbnail rounded-circle z-depth-2 " style="width:66px">        
-          <div class="d-flex flex-column mx-2  flex-grow-1 justify-content-center">
-            <p class="fw-bold my-0">Gwen Isabella</p>
-            <p class="fw-lighter fs-6 my-0" ><small>costumer service</small></p>
+        @foreach($data as $kelompok)
+          <div class="costumer-service d-flex flex-row  mb-4">
+            <img src="{{ $kelompok->foto }}" alt="" class="img-thumbnail rounded-circle" style="width:66px">                  
+              <div class="d-flex flex-column mx-2 flex-grow-1  justify-content-center">
+                <p class="fw-bold my-0">{{ $kelompok->nama }}</p>
+                <p class="fw-lighter fs-6 my-0" ><small>{{ $kelompok->nbi }}</small></p>
+              </div>
+              <div class="d-flex flex-column justify-content-center mx-4">
+                <a href="{{ $kelompok->link }}">
+                  <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
+                </a>
+              </div>          
           </div>
-          <div class="d-flex flex-column justify-content-center mx-4">
-            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
-          </div>   
-        </div>
-
-        <div class="costumer-service d-flex flex-row mb-4">
-          <img src="assets/support-center/someone.png" alt="" class="img-thumbnail rounded-circle z-depth-2 "style="width:66px">        
-          <div class="d-flex flex-column mx-2 flex-grow-1 justify-content-center">
-            <p class="fw-bold my-0">Gwen Isabella</p>
-            <p class="fw-lighter fs-6 my-0" ><small>costumer service</small></p>
-          </div>
-          <div class="d-flex flex-column justify-content-center mx-4">
-            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
-          </div>   
-        </div>
-        
-        <div class="costumer-service d-flex flex-row mb-4">
-          <img src="assets/support-center/someone.png" alt="" class="img-thumbnail rounded-circle z-depth-2 "style="width:66px">        
-          <div class="d-flex flex-column mx-2 flex-grow-1 justify-content-center">
-            <p class="fw-bold my-0">Gwen Isabella</p>
-            <p class="fw-lighter fs-6 my-0" ><small>costumer service</small></p>
-          </div>
-          <div class="d-flex flex-column justify-content-center mx-4">
-            <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
-          </div>   
-        </div>        
+        @endforeach
       </div>
-
-      <div class="col">
-        <img src="assets/support-center/help-person.png" class="figure-img img-fluid rounded" >
-      </div>
-
+    <div class="col">
+      <img src="assets/support-center/help-person.png" class="figure-img img-fluid rounded" >
     </div>
   </div>
 </section>
