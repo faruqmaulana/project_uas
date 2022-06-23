@@ -13,7 +13,7 @@
         <div class="container-fluid pb-2 pt-5" style="background-color: white">
             <div class="container ">
                 <div class="col-12 d-flex align-items-center justify-content-center flex-column">
-                    <a href="#"><img src="assets/login/logo.png" alt=""></a>
+                    <a href="/"><img src="assets/login/logo.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -161,7 +161,7 @@
                         <h1 class="text-center" style="font-size: 20px">2022 PT.Tiketku. All Right Reserved</h1>
                     </div>
                     <div class="col-12 d-flex align-items-center justify-content-center flex-column">
-                        <a href="#">
+                        <a href="/">
                             <img src="assets/login/logo.png" alt="">
                         </a>
                     </div>
