@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function index(Request $request){
+    public function index(Request $request)
+    {
         // $profile = $request->cookie('data');
         // $data = json_decode($profile);
         // dd($data);
@@ -24,21 +25,22 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $data = Mahasiswa::findOrFail($id);
-        dd($data);
-        return view('mahasiswa.0247edit', ['data' => $data]);
-    }
+    // public function edit($id)
+    // {
+    //     $data = Mahasiswa::findOrFail($id);
+    //     dd($data);
+    //     return view('mahasiswa.0247edit', ['data' => $data]);
+    // }
 
-     /**
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updateProfile(Request $request){
+    public function updateProfile(Request $request)
+    {
         USER::where('id', $request->id)->update([
             'username' => $request->username,
         ]);
