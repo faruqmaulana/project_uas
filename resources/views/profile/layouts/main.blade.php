@@ -22,15 +22,15 @@
     
     @if(session()->has('updateSuccess'))
     <script>
-      $(function(){
-              Swal.fire({
-              icon: 'success',
-              title: 'Update successfully!',
-              text: '{{ Session::get("updateSuccess") }}',
-              showConfirmButton: false,
-              timer: 2000
-          })
-      });
+      $(setTimeout(() => { 
+          Swal.fire({
+          icon: 'success',
+          title: 'Update successfully!',
+          text: '{{ Session::get("updateSuccess") }}',
+          showConfirmButton: false,
+          timer: 2000
+        })
+      }, 200));
       </script>
     @endif
       <script>
@@ -54,48 +54,27 @@
     </script>
 
     <!-- confirm button -->
-    <!-- <script>
+    <script>
       $('.update-data').click(function(event){
+        var form = jQuery("#submitForm");
         event.preventDefault();
         Swal.fire({
           title: 'Are you sure?',
-          text: "You won't be able to revert this!",
+          text: "Wanna change your profile?",
           icon: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Yes, delete it!'
+          cancelButtonColor: '#ed1f24',
+          confirmButtonText: 'Yes'
         }).then((result) => {
           if (result.isConfirmed) {
-            const id = $("input[name=id]").val();
-            const username = $("input[name=username]").val();
-            window.location = '/my-profile';
-            $.ajax({
-                type: "POST",
-                url: "/my-profile",
-                data: {
-                  id,
-                  username
-                },
-                success: function (data) {
-                      Swal.fire({
-                      icon: 'success',
-                      title: 'Update successfully!',
-                      text: '{{ Session::get("updateSuccess") }}',
-                      showConfirmButton: false,
-                      timer: 2000
-                  })  
-                }         
-            });
+            $("#process").html("Processing...");
+            setTimeout(() => {
+              form.submit();
+            }, 1000);
           }
         })
       })
-    </script> -->
-
-    <!-- <script>
-      $(".alert").delay(3000).slideUp(200, function() {
-        $(this).alert('close');
-      });
-    </script> -->
+    </script>
   </body>
 </html>

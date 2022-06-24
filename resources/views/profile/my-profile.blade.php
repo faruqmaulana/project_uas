@@ -7,12 +7,6 @@
         <p class="font-lg-xl font-bold">Detail akun</p>
         <p class="font-md font-bold color-gray">Disini kamu bisa mengatur detail akunmu</p>
       </div>
-      <!-- @if(session()->has('updateSuccess'))
-      <div class="col-6 alert alert-success alert-dismissible fade show" role="alert" style="width: 47%;" id="success-alert">
-          {{ session('updateSuccess') }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      @endif -->
     </div>
     <div class="d-flex justify-content-between">
       <div class="email-box bg-gray-profile d-flex justify-content-between flex-column font-md font-bold p-3">
@@ -27,7 +21,7 @@
           </a>
         </div>
       </div>
-      <form method="POST" style="width: 50%; margin-left:20px;" >
+      <form id="submitForm" method="POST" style="width: 50%; margin-left:20px;" >
         @csrf {!! method_field('PUT') !!}  
         <div class="mb-3">
           <label class="form-label">Username</label>
@@ -36,10 +30,10 @@
         </div>
         <div class="mb-3">
           <label class="form-label">Citizen ID</label>
-          <input type="text" class="form-control" value="14281937912301980298" disabled>
+          <input type="text" class="form-control" value="{{ auth()->user()->citizen_id }}" disabled>
         </div>
         <div class="d-flex justify-content-end pt-2">
-          <button type="submit" class="btn btn-red font-md font-white font-bold update-data" style="width: 197px;">Simpan</button>
+          <button id="process" type="submit" class="btn btn-red font-md font-white font-bold update-data" style="width: 197px;">Simpan</button>
         </div>
       </form>
     </div>
