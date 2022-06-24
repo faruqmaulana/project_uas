@@ -61,63 +61,65 @@
               <div class="card-body px-4">
                 <div class="row">
 
-                  <div class="col my-auto">
-                    <div class="row">
-                      <div class="col">
-                        <p>
-                          <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold">{{ $dat->airline->name }}</span>
-                        </p> 
-                      </div>
-                      <div class="col">
-                        <p>
-                          <span class="title-available font-bold">Seat Class</span><br><span class="h5 fw-bold">{{ $dat->class_flight->class_name }}</span>
-                        </p>                      
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-4 my-auto">
-                    <div class="row text-center">
-                      <div class="col my-auto">
-                        <p class="my-auto">
-                          <span class="h2 fw-bold">{{ substr($dat->departure_time, 0, -3) }}</span><br><span class="">{{ $dat->source_cities->source_city_name }}</span>
-                        </p> 
-                      </div>
-                      <div class="col my-auto">
-                        <p class="my-auto" style="font-weight: 500; font-size: 16px; line-height: 19px;">
-                            <?php
-                              $time1 = new DateTime($dat->depature_time);
-                              $time2 = new DateTime($dat->arrive_time);
-                              $time_diff = $time1->diff($time2);
-                              echo $time_diff->h.'h';
-                              echo $time_diff->i.'m';
-                            ?>            
-                          </p>
-                        <img src="../assets/review/line.png" width="130px" alt="">
-                        <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
-                      </div>
-                      <div class="col my-auto">
-                        <p class="my-auto">
-                          <span class="h2 fw-bold">{{ substr($dat->arrive_time, 0, -3) }}</span><br><span class="">{{ $dat->dest_cities->dest_city_name }}</span>
-                        </p> 
+                  {{-- <form action="" method="GET" class="d-inline"> --}}
+                    <div class="col my-auto">
+                      <div class="row">
+                        <div class="col">
+                          <p>
+                            <span class="title-available font-bold">Airline</span><br><span class="h5 fw-bold" name="airline">{{ $dat->airline->name }}</span>
+                          </p> 
+                        </div>
+                        <div class="col">
+                          <p>
+                            <span class="title-available font-bold">Seat Class</span><br><span class="h5 fw-bold" name="class_name">{{ $dat->class_flight->class_name }}</span>
+                          </p>                      
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="col-1 text-center">
-                    <img src="../assets/review/line-vertikal.png" alt="" style="height: 8rem">
-                  </div>
-
-                  <div class="col-3 my-auto">
-                    <div class="row justify-content-between">
-                      <div class="col">
-                        <p class="h2 fw-bold">${{ $dat->price }}</p>
+                    <div class="col-4 my-auto">
+                      <div class="row text-center">
+                        <div class="col my-auto">
+                          <p class="my-auto">
+                            <span class="h2 fw-bold">{{ substr($dat->departure_time, 0, -3) }}</span><br><span class="">{{ $dat->source_cities->source_city_name }}</span>
+                          </p> 
+                        </div>
+                        <div class="col my-auto">
+                          <p class="my-auto" style="font-weight: 500; font-size: 16px; line-height: 19px;">
+                              <?php
+                                $time1 = new DateTime($dat->depature_time);
+                                $time2 = new DateTime($dat->arrive_time);
+                                $time_diff = $time1->diff($time2);
+                                echo $time_diff->h.'h';
+                                echo $time_diff->i.'m';
+                              ?>            
+                            </p>
+                          <img src="../assets/review/line.png" width="130px" alt="">
+                          <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
+                        </div>
+                        <div class="col my-auto">
+                          <p class="my-auto">
+                            <span class="h2 fw-bold">{{ substr($dat->arrive_time, 0, -3) }}</span><br><span class="">{{ $dat->dest_cities->dest_city_name }}</span>
+                          </p> 
+                        </div>
                       </div>
-                      <div class="col ">
-                        <a href="#" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</a>
-                      </div>                    
                     </div>
-                  </div>
+
+                    <div class="col-1 text-center">
+                      <img src="../assets/review/line-vertikal.png" alt="" style="height: 8rem">
+                    </div>
+
+                    <div class="col-3 my-auto">
+                      <div class="row justify-content-between">
+                        <div class="col">
+                          <p class="h2 fw-bold">${{ $dat->price }}</p>
+                        </div>
+                        <div class="col ">
+                          <button href="#" type="submit" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</button>
+                        </div>                    
+                      </div>
+                    </div>
+                  {{-- </form> --}}
 
                 </div>
               </div>
