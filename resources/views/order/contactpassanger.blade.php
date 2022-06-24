@@ -17,17 +17,11 @@
                         <label for="inputAddress" class="font-sm font-bold">E-Mail</label>
                         <input type="text" class="form-control" id="inputEmail" placeholder="kamusiapa@gmail.com">
                     </div>
-                </div>
-                <div class="p-2">
-                    <div class="col-20">
-                        <label for="inputAddress2" class="font-sm font-bold">Phone Number</label>
-                        <input type="text" class="form-control" id="inputPhoneNumber" placeholder="08123478910">
-                    </div>
-                </div>         
+                </div>        
                 <div class="pt-5">
-                    <p class="title-section-primary">Passanger</p>
+                    <p class="title-section-primary">Passenger</p>
                     <div class="pt-3">
-                        <p class="title-section-primary1">Passanger 1</p>
+                        <p class="title-section-primary1">Passenger 1</p>
                     </div>
                         <div class="col-md-">
                             <label for="inputName" class="font-sm font-bold">Full Name</label>
@@ -46,31 +40,12 @@
                             </div>
                         </div>
 
-                        <div class="pt-5">
-                            <p class="title-section-primary1">Passanger 2</p>
+                        {{-- Button --}}
+                        <div class="d-flex justify-content-end">
+                                <a href="#">
+                                <button class="btn btn-red nav-fonts font-white font-bold mt-5">NEXT</button>
+                                </a>
                         </div>
-                            <div class="col-md-">
-                                <label for="inputName" class="font-sm font-bold">Full Name</label>
-                                <input type="email" class="form-control" id="inputfullname">
-                            </div>
-                            <div class="pt-3">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="inputCitizen" class="font-sm font-bold">Citizen Number</label>
-                                        <input type="citizen" class="form-control" id="citizenNumber">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputNationality" class="font-sm font-bold">Nationality</label>
-                                        <input type="nationality" class="form-control" id="inputNationality">
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- Button --}}
-                            <div class="d-flex justify-content-end">
-                                  <a href="#">
-                                    <button class="btn btn-red nav-fonts font-white font-bold mt-5">NEXT</button>
-                                  </a>
-                            </div>
                 </div>
             </form>
         </div>
