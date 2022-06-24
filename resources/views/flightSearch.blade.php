@@ -10,7 +10,7 @@
             </div>
         </div>
         
-        <form>
+        <form action="/flight/flight-search" method="GET">
             <div class="d-flex align-items-center justify-content-between">
               <div class="p-4">
                   <label for="from" class="form-label font-md font-bold-xl">From</label>
