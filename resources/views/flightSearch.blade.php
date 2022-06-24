@@ -1,7 +1,6 @@
 @extends('layouts.main')
 @section('container')
 
-{{-- {{ dd($class_selected[0]->id) }} --}}
 <section>
     <div class="container mt-5 px-5">
 
@@ -80,6 +79,7 @@
                     <div class="col-4 my-auto">
                       <div class="row text-center">
                         <div class="col my-auto">
+                          <?= $dat->departure_date?>
                           <p class="my-auto">
                             <span class="h2 fw-bold">{{ substr($dat->departure_time, 0, -3) }}</span><br><span class="">{{ $dat->source_cities->source_city_name }}</span>
                           </p> 
@@ -87,9 +87,9 @@
                         <div class="col my-auto">
                           <p class="my-auto" style="font-weight: 500; font-size: 16px; line-height: 19px;">
                               <?php
-                                $time1 = new DateTime($dat->depature_time);
-                                $time2 = new DateTime($dat->arrive_time);
-                                $time_diff = $time1->diff($time2);
+                                $berangkat = new DateTime($dat->departure_date." ".$dat->departure_time);
+                                $tiba = new DateTime($dat->arrive_date." ".$dat->arrive_time);
+                                $time_diff = $berangkat->diff($tiba);
                                 echo $time_diff->h.'h';
                                 echo $time_diff->i.'m';
                               ?>            
@@ -98,6 +98,7 @@
                           <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
                         </div>
                         <div class="col my-auto">
+                        <?= $dat->arrive_date?>
                           <p class="my-auto">
                             <span class="h2 fw-bold">{{ substr($dat->arrive_time, 0, -3) }}</span><br><span class="">{{ $dat->dest_cities->dest_city_name }}</span>
                           </p> 
