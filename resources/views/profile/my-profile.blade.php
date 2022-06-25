@@ -1,5 +1,4 @@
 @extends('profile.layouts.main')
-
 @section('container')
   <div class="col-8">
     <div class="d-flex align-items-center justify-content-between">
@@ -26,11 +25,11 @@
         <div class="mb-3">
           <label class="form-label">Username</label>
           <input type="hidden" name="id" value="{{ auth()->user()->id }}">
-          <input name="username" type="text" class="form-control" value="{{ auth()->user()->username }}">
+          <input name="username" type="text" class="form-control" value="{{ auth()->user()->username }}" required>
         </div>
         <div class="mb-3">
           <label class="form-label">Citizen ID</label>
-          <input type="text" class="form-control" value="{{ auth()->user()->citizen_id }}" disabled>
+          <input name="citizen_id" type="text" class="form-control" value="{{ auth()->user()->citizen_id }}">
         </div>
         <div class="d-flex justify-content-end pt-2">
           <button id="process" type="submit" class="btn btn-red font-md font-white font-bold update-data" style="width: 197px;">Simpan</button>

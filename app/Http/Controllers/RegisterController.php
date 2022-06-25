@@ -33,10 +33,9 @@ class RegisterController extends Controller
             'email' => 'required|email:dns|unique:users',
             'password' => 'required|min:5|max:255'
         ]);
+        
         //hashing password using bcrypt
         $validatedData['password'] = bcrypt($validatedData['password']);
-        $validatedData['citizen_id'] = $randomString;
-        // dd($validatedData);
 
         User::create($validatedData);
 

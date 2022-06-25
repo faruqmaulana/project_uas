@@ -9,9 +9,6 @@ class ProfileController extends Controller
 {
     public function index(Request $request)
     {
-        // $profile = $request->cookie('data');
-        // $data = json_decode($profile);
-        // dd($data);
 
         return view('profile.my-profile', [
             'active' => 'Flight',
@@ -41,9 +38,12 @@ class ProfileController extends Controller
      */
     public function updateProfile(Request $request)
     {
-        USER::where('id', $request->id)->update([
-            'username' => $request->username,
+        $validatedData = $request->validate([
+            'username' => ['required', 'min:10', 'max:255', 'unique:users'],
         ]);
+        $validatedData['password'] = $request->citizen_id;
+
+        USER::where('id', $request->id)->update($validatedData);
 
         return back()->with('updateSuccess', 'Your profile has been updated!');
     }

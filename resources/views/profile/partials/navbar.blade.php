@@ -1,3 +1,6 @@
+<?php
+$urlPath = $_SERVER['REQUEST_URI']
+?>
 <nav class="navbar navbar-expand-lg navbar-success py-2 sticky-top bg-white shadow">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -29,9 +32,9 @@
           <button class="btn btn-red font-md font-white font-bold mx-3" style="width: -webkit-fill-available;">{{ auth()->user()->name }}</button>
         </a>
     
-        <ul class="dropdown-menu my-3" aria-labelledby="dropdownMenuLink">
+        <ul class="dropdown-menu my-3" aria-labelledby="dropdownMenuLink" style="margin-left: 14px;">
           <li>
-            <a class="dropdown-item" href="/my-profile">
+            <a class="dropdown-item {{ $urlPath === '/my-profile' ? 'active-dropdown' : '' }}" href="/my-profile">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" style="margin-bottom: 3px; margin-right: 4px;">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -40,7 +43,7 @@
             </a>
           </li>
           <li>
-            <a class="dropdown-item" href="/my-ticket">
+            <a class="dropdown-item {{ $urlPath !== '/my-profile' ? 'active-dropdown' : '' }}" href="/my-ticket">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket" viewBox="0 0 16 16" style="margin-bottom: 3px; margin-right: 4px;">
                 <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"/>
               </svg>
