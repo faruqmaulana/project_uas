@@ -82,7 +82,7 @@ $urlPath = $_SERVER["REQUEST_URI"];
                     <div class="col-4 my-auto">
                       <div class="row text-center">
                         <div class="col my-auto">
-                          <?= $dat->departure_date?>
+                          {{ $dat->departure_date }}
                           <p class="my-auto">
                             <span class="h2 fw-bold">{{ substr($dat->departure_time, 0, -3) }}</span><br><span class="">{{ $dat->source_cities->source_city_name }}</span>
                           </p> 
@@ -102,7 +102,7 @@ $urlPath = $_SERVER["REQUEST_URI"];
                           <img src="../assets/review/plane-icon.png" width="28px" alt="">                  
                         </div>
                         <div class="col my-auto">
-                        <?= $dat->arrive_date?>
+                        {{ $dat->arrive_date }}
                           <p class="my-auto">
                             <span class="h2 fw-bold">{{ substr($dat->arrive_time, 0, -3) }}</span><br><span class="">{{ $dat->dest_cities->dest_city_name }}</span>
                           </p> 

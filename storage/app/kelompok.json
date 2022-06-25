@@ -12,6 +12,12 @@
         "link": "https://wa.me/6281249165641"
     },
     {
+        "nama": "Muhammad Adrian Ronaldy",
+        "nbi": "1462000253",
+        "foto": "assets/kelompok/ronal.jpg",
+        "link": "https://wa.me/6282158993126"
+    },
+    {
         "nama": "Joshua Mario Agustinus",
         "nbi": "1462000219",
         "foto": "assets/kelompok/joshua.jpg",
@@ -28,11 +34,5 @@
         "nbi": "1462000019",
         "foto": "assets/kelompok/adit.jpg",
         "link": "https://wa.me/6283105625329"
-    },
-    {
-        "nama": "Muhammad Adrian Ronaldy",
-        "nbi": "1462000253",
-        "foto": "assets/kelompok/ronal.jpg",
-        "link": "https://wa.me/6282158993126"
     }
 ]

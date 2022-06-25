@@ -17,7 +17,7 @@
                 <p class="fw-lighter fs-6 my-0" ><small>{{ $kelompok->nbi }}</small></p>
               </div>
               <div class="d-flex flex-column justify-content-center mx-4">
-                <a href="{{ $kelompok->link }}">
+                <a href="{{ $kelompok->link }}" target="_blank">
                   <button type="button" class="rounded-pill btn-md btn btn-outline-danger px-4" style="btn:hover{color: var(--white-color)}">Chat</button>
                 </a>
               </div>          
