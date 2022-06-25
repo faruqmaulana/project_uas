@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->foreignId('source_city_id');
             $table->foreignId('dest_city_id');
             $table->foreignId('airline_city_id');
@@ -25,7 +26,6 @@ return new class extends Migration
             $table->time('arive_time');
             $table->string('passanger_name');
             $table->string('flight_number');
-            $table->string('ticket_code');
             $table->timestamps();
         });
     }
