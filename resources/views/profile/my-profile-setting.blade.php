@@ -10,15 +10,15 @@
                     Name
                 </button>
                 </h2>
-                <div class="row">
+                <div class="col">
                     <div class="col">
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="row mb-3 pt-3 d-flex  flex-column">
-                            <div class="col-5 py-2">
-                                <input name="email" type="email"  class="form-control border" id="floatingInput" placeholder="nama" style="height: 80px" required autofocus>
+                        <div class="row mb-3 pt-2 flex-coloumn align-item-center">
+                            <div class="col-5 py-3 pl-2" style="margin-top: 10px; margin-left: 15px;">
+                                <input name="email" type="email"  class="form-control border-dark ml-5" id="floatingInput" placeholder="Nama" style="height: 55px" required autofocus>
                             </div>
-                            <div class="col-3">
-                                <button type="submit" class="btn btn-lg btn-danger rounded-pill">Simpan</button>
+                            <div class="col-2 py-3" style="margin-left: 35%; margin-top: 10px">
+                                <button type="submit" class="btn btn-red font-md font-white font-bold" style="width: 153px;">ganti</button>
                             </div>
                         </div>
                         </div>
