@@ -39,9 +39,9 @@ class ProfileController extends Controller
     public function updateProfile(Request $request)
     {
         $validatedData = $request->validate([
-            'username' => ['required', 'min:10', 'max:255', 'unique:users'],
+            'username' => ['required'],
         ]);
-        $validatedData['password'] = $request->citizen_id;
+        $validatedData['citizen_id'] = $request->citizen_id;
 
         USER::where('id', $request->id)->update($validatedData);
 
