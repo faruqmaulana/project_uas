@@ -19,6 +19,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
+    @error('username')
+    <script>
+      $(setTimeout(() => { 
+          Swal.fire({
+          icon: 'error',
+          title: 'Update failed!',
+          text: '{{ $message }}',
+          showConfirmButton: false,
+          timer: 2000
+        })
+      }, 100));
+      </script>
+    @enderror
     
     @if(session()->has('updateSuccess'))
     <script>

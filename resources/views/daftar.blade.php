@@ -94,7 +94,7 @@
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
                                                     </div>
-                                                @enderror
+                                                 @enderror
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -107,7 +107,7 @@
                                                         </div>
                                                     </div>
                                                 </label>
-                                                 @error('name')
+                                                @error('name')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
                                                     </div>
