@@ -18,12 +18,12 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->foreignId('source_city_id');
             $table->foreignId('dest_city_id');
-            $table->foreignId('airline_city_id');
+            $table->foreignId('airline_id');
             $table->string('ticket_code');
             $table->date('departure_date');
             $table->time('departure_time');
-            $table->date('arive_date');
-            $table->time('arive_time');
+            $table->date('arrive_date');
+            $table->time('arrive_time');
             $table->string('passenger_name');
             $table->string('flight_number');
             $table->timestamps();

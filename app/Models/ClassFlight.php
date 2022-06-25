@@ -13,4 +13,9 @@ class ClassFlight extends Model
     {
         return $this->hasOne(FlightRoute::class);
     }
+
+    public function ticket()
+    {
+        return $this->hasOne(Ticket::class);
+    }
 }
