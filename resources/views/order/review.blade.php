@@ -146,7 +146,7 @@
         </div>
 
         <div class="d-flex justify-content-end my-5">
-          <form action="/order/eticket" method="POST">
+          <form action="/order/create" method="POST">
             @csrf
             <input type="hidden" value="{{ $passenger_name }}" name="passenger_name">
             <input type="hidden" value="{{ $passenger_citizen_id }}" name="passenger_citizen_id">
@@ -158,7 +158,7 @@
             <input type="hidden" value="{{ $arrive_date_selected }}" name="arrive_date_selected">
             <input type="hidden" value="{{ $arrive_time_selected }}" name="arrive_time_selected">
             <input type="hidden" value="{{ $class_flight_selected[0]->id }}" name="class_flight_selected">
-            <input type="hidden" value="{{ $airline_selected[0]->id }}" name="$airline_selected">
+            <input type="hidden" value="{{ $airline_selected[0]->id }}" name="airline_selected">
             <input type="hidden" value="{{ $price_selected }}" name="price_selected">
             <input type="hidden" value="{{ $price_plus_tax }}" name="price_plus_tax">
             <input type="hidden" value="{{ $total_payment }}" name="total_payment">
