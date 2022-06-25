@@ -1,5 +1,9 @@
 @extends('layouts.main')
 @section('container')
+<?php
+$urlPath = $_SERVER["REQUEST_URI"];
+?>
+
 
 <section>
     <div class="container mt-5 px-5">
@@ -89,8 +93,9 @@
                                 $berangkat = new DateTime($dat->departure_date." ".$dat->departure_time);
                                 $tiba = new DateTime($dat->arrive_date." ".$dat->arrive_time);
                                 $time_diff = $berangkat->diff($tiba);
-                                echo $time_diff->h.'h';
-                                echo $time_diff->i.'m';
+
+                                $flightDuration = $time_diff->h === 0 ? $time_diff->i.'m' : $time_diff->h.'h'.$time_diff->i.'m';
+                                echo $flightDuration;
                               ?>            
                             </p>
                           <img src="../assets/review/line.png" width="130px" alt="">
@@ -114,7 +119,7 @@
                         <div class="col">
                           <p class="h2 fw-bold">${{ $dat->price }}</p>
                         </div>
-                        <div class="col ">
+                        <div class="col">
                             <form action="/order" method="GET" class="d-inline">
                               <input type="hidden" value="{{ $dat->airline_id }}" name="airline_id">
                               <input type="hidden" value="{{ $dat->class_flight_id }}" name="class_flight_id">
@@ -125,6 +130,7 @@
                               <input type="hidden" value="{{ $dat->arrive_date }}" name="arrive_date">
                               <input type="hidden" value="{{ $dat->arrive_time }}" name="arrive_time">
                               <input type="hidden" value="{{ $dat->price }}" name="price">
+                              <input type="hidden" value="{{ $urlPath }}" name="url">
                             <button type="submit" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</button>
                           </form>
                         </div>                    

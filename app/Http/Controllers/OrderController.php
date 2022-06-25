@@ -25,6 +25,7 @@ class OrderController extends Controller
         $arrive_date_selected = $request->arrive_date;
         $arrive_time_selected = $request->arrive_time;
         $price_selected = $request->price;
+        $url = $request->url;
 
         if (Auth::check() == false) {
             return redirect('/login')->with('info', 'Please login first');
@@ -40,7 +41,8 @@ class OrderController extends Controller
             'departure_time_selected' => $departure_time_selected,
             'arrive_date_selected' => $arrive_date_selected,
             'arrive_time_selected' => $arrive_time_selected,
-            'price_selected' => $price_selected
+            'price_selected' => $price_selected,
+            'url' => $url
         ]);
     }
 
