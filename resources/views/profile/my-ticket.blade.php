@@ -67,7 +67,7 @@
           <div class="col-1 my-auto" style="width: 1rem">
             <form action="{{ url('/my-ticket/'. $ticket->id .'/delete') }}" method="POST">
               @csrf
-              <button type="submit" value="Delete">
+              <button type="submit" class="btn btn-primary-outline" value="Delete">
                 <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center trash-btn">          
               </button>
             </form>
