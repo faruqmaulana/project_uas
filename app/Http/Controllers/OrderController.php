@@ -126,7 +126,7 @@ class OrderController extends Controller
             'flight_number' => $flight_number_random
         ]);
 
-        return redirect('/order/eticket');
+        return redirect('/order/eticket')->with('booked', 'Your ticket has been successfully booked!');
     }
 
 

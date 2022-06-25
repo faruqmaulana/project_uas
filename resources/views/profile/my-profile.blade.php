@@ -24,7 +24,6 @@
         @csrf {!! method_field('PUT') !!}  
         <div class="mb-3">
           <label class="form-label">Username</label>
-          <input type="hidden" name="id" value="{{ auth()->user()->id }}">
           <input name="username" type="text" class="form-control" value="{{ auth()->user()->username }}" required>
         </div>
         <div class="mb-3">

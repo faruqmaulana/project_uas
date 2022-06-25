@@ -33,27 +33,27 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="d-flex align-items-center flex-column">
       <p class="font-lg font-bold mx-3">Ticket Code</p>
       <h2 class="font-xl font-bold" style="color: var(--red-color);">{{ $data_ticket[0]->ticket_code }}</h2>
     </div>
   </div>
   <hr class="border-3">
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between py-2">
     <div class="d-flex">
-      <img src="../assets/eticket/Identity.png" alt="" width="100px">
-      <p class="ms-4 me-4">Show your ticket and valid identity card in the airport</p>
+      <img src="../assets/eticket/Identity.png" alt="" width="50px" height="45px">
+      <p class="ms-4 p-0 m-0 me-4">Show your ticket and valid identity card in the airport</p>
     </div>
     <div>
       
     </div>
     <div class="d-flex">
-      <img src="../assets/eticket/Check-in.png" alt="" width="100px">
-      <p class="ms-4 me-4">You must check-in atleast 90 minutes before departure</p>
+      <img src="../assets/eticket/Check-in.png" alt="" width="50px" height="45px">
+      <p class="ms-4 p-0 m-0 me-4">You must check-in atleast 90 minutes before departure</p>
     </div>
     <div class="d-flex">
-      <img src="../assets/eticket/Information.png" alt="" width="100px">
-      <p class="ms-4">Time format is depending on the airport location</p>
+      <img src="../assets/eticket/Information.png" alt="" width="50px" height="45px">
+      <p class="ms-4 p-0 m-0">Time format is depending on the airport location</p>
     </div>
   </div>
   <hr>

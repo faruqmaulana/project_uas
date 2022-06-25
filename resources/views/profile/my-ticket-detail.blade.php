@@ -7,12 +7,11 @@
         <div class="d-flex justify-content-around">
           <div class="col-sm-3 mx-3">
             <p class="font-lg font-bold">{{ $ticket->airline->name }}</p>
-              <img src="../assets/flights/{{ $ticket->airline->logo }}" alt="" width="40%">
+              <img src="../assets/flights/{{ $ticket->airline->logo }}" alt="" width="80%">
           </div>
           <div class="flex-grow-2 mx-3">
             <p class="font-md font-bold">{{ date("l, d M Y", strtotime($ticket->departure_date)) }}</p>
             <div>
-      
             </div>
             <div class="d-flex mb-3">
               <div class="col-sm-1 justify-content-start me-5">
@@ -33,27 +32,27 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="d-flex align-items-center flex-column">
             <p class="font-lg font-bold mx-3">Ticket Code</p>
             <h2 class="font-lg font-bold" style="color: var(--red-color);">{{ $ticket->ticket_code }}</h2>
           </div>
         </div>
         <hr class="border-3">
         <div class="d-flex justify-content-between">
-          <div class="d-flex">
-            <img src="../assets/eticket/Identity.png" alt="" width="100px" height="50px">
-            <p class="ms-4 me-4">Show your ticket and valid identity card in the airport</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="../assets/eticket/Identity.png" alt="" width="50px" height="40px">
+            <p class="ms-4 me-4" style="padding: 0; margin: 0;">Show your ticket and valid identity card in the airport</p>
           </div>
           <div>
             
           </div>
-          <div class="d-flex">
-            <img src="../assets/eticket/Check-in.png" alt="" width="100px" height="50px">
-            <p class="ms-4 me-4">You must check-in atleast 90 minutes before departure</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="../assets/eticket/Check-in.png" alt="" width="50px" height="40px">
+            <p class="ms-4 me-4" style="padding: 0; margin: 0;">You must check-in atleast 90 minutes before departure</p>
           </div>
-          <div class="d-flex">
-            <img src="../assets/eticket/Information.png" alt="" width="100px" height="50px">
-            <p class="ms-4">Time format is depending on the airport location</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="../assets/eticket/Information.png" alt="" width="50px" height="40px">
+            <p class="ms-4" style="padding: 0; margin: 0;">Time format is depending on the airport location</p>
           </div>
         </div>
         <hr>

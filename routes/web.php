@@ -91,9 +91,5 @@ Route::get('/my-profile', [ProfileController::class, 'index']);
 Route::put('/my-profile', [ProfileController::class, 'updateProfile']);
 
 
-Route::get('/my-profile-setting', function () {
-  return view('profile.my-profile-setting', [
-    'active' => 'Flight',
-    'tittle' => 'My Profile'
-  ]);
-});
+Route::get('/my-profile-setting', [ProfileController::class, 'profileSetting']);
+Route::put('/my-profile-setting', [ProfileController::class, 'updateProfileSetting']);
