@@ -25,7 +25,7 @@
                     </div>
                         <div class="col-md-">
                             <label for="inputName" class="font-sm font-bold">Full Name</label>
-                            <input type="email" class="form-control" id="inputfullname" name="passenger_name">
+                            <input type="text" class="form-control" id="inputfullname" name="passenger_name">
                         </div>
                         <div class="pt-3">
                             <div class="row g-3">
@@ -41,7 +41,16 @@
                         </div>
 
                         {{-- Button --}}
-                        <div class="d-flex justify-content-end">  
+                        <div class="d-flex justify-content-end">
+                            <input type="hidden" value="{{ $airline_selected }}" name="airline_selected">
+                            <input type="hidden" value="{{ $class_flight_selected }}" name="class_flight_selected">
+                            <input type="hidden" value="{{ $source_city_selected }}" name="source_city_selected">
+                            <input type="hidden" value="{{ $dest_city_selected }}" name="dest_city_selected">
+                            <input type="hidden" value="{{ $departure_date_selected }}" name="departure_date_selected">
+                            <input type="hidden" value="{{ $departure_time_selected }}" name="departure_time_selected">
+                            <input type="hidden" value="{{ $arrive_date_selected }}" name="arrive_date_selected">
+                            <input type="hidden" value="{{ $arrive_time_selected }}" name="arrive_time_selected">
+                            <input type="hidden" value="{{ $price_selected }}" name="price_selected">
                             <button type="submit" class="btn btn-red nav-fonts font-white font-bold mt-5">NEXT</button>
                         </div>
                 </div>

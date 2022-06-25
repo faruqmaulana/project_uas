@@ -55,7 +55,8 @@ Route::get('/flightsearch', function () {
 
 Route::get('/order', [OrderController::class, 'inputContact'])->middleware('auth');
 Route::get('/order/review', [OrderController::class, 'orderReview'])->middleware('auth');
-Route::get('/order/review/eticket', [OrderController::class, 'eTicket'])->middleware('auth');
+Route::post('/order/eticket', [OrderController::class, 'eTicketCreate']);
+Route::get('/order/eticket', [OrderController::class, 'eTicket'])->middleware('auth');
 
 //end of order section
 
