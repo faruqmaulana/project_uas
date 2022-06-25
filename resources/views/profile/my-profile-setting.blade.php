@@ -10,13 +10,21 @@
                     Name
                 </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body accordion-setting">
-                    <select class="form-select my-3" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                    </select>
-                </div>
+                <div class="row">
+                    <div class="col">
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="row mb-3 pt-3">
+                            <div class="col-5 py-1">
+                                <div class="my-3">
+                                    <input name="email" type="email"  class="form-control border" id="floatingInput" placeholder="nama" style="height: 80px" required autofocus>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <button type="submit" class="btn btn-lg btn-danger rounded-pill">Simpan</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="accordion-item">
