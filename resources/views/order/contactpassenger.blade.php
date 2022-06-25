@@ -56,7 +56,7 @@
                 </div>
             </form>
             <div class="d-flex justify-content-start">  
-                <a href="{{ url()->previous() }}">
+                <a href="{{ url('/flight') }}">
                     <button class="btn btn-red nav-fonts font-white font-bold mt-5">CANCEL</button>
                 </a> 
             </div> 
