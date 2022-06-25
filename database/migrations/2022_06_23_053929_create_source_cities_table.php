@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('source_cities', function (Blueprint $table) {
             $table->id();
             $table->string('source_city_name');
+            $table->string('source_city_airport');
             $table->timestamps();
         });
     }

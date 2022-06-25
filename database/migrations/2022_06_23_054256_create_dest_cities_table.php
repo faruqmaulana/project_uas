@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('dest_cities', function (Blueprint $table) {
             $table->id();
             $table->string('dest_city_name');
+            $table->string('dest_city_airport');
             $table->timestamps();
         });
     }
