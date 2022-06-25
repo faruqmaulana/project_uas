@@ -6,6 +6,7 @@ use App\Models\Airline;
 use App\Models\ClassFlight;
 use App\Models\SourceCity;
 use App\Models\DestCity;
+use App\Models\Ticket;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -99,7 +100,7 @@ class OrderController extends Controller
 
     public function eTicketCreate(Request $request)
     {
-        dd($request->passenger_name);
+        // dd($request->passenger_name);
     }
 
 
