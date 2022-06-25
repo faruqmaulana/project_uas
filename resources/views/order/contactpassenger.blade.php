@@ -25,7 +25,7 @@
                     </div>
                         <div class="col-md-">
                             <label for="inputName" class="font-sm font-bold">Full Name</label>
-                            <input type="text" class="form-control" id="inputfullname" name="passenger_name">
+                            <input type="text" class="form-control" id="inputfullname" name="passenger_name" value="{{ auth()->user()->name }}">
                         </div>
                         <div class="pt-3">
                             <div class="row g-3">
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputNationality" class="font-sm font-bold">Nationality</label>
-                                    <input type="text" class="form-control" id="inputNationality" name="passenger_nationality">
+                                    <input type="text" class="form-control" id="inputNationality" name="passenger_nationality" value="{{ auth()->user()->nationality }}">
                                 </div>
                             </div>
                         </div>
