@@ -14,6 +14,7 @@ class Ticket extends Model
         'source_city_id',
         'dest_city_id',
         'airline_id',
+        'class_flight_id',
         'ticket_code',
         'departure_date',
         'departure_time',

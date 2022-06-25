@@ -6,37 +6,36 @@
         <h1 class="text-start fw-bold mb-5">My Tickets</h1>
         <div class="d-flex justify-content-around">
           <div class="col-sm-3 mx-3">
-            <p class="font-lg font-bold">Air Asia</p>
-              <img src="../assets/flights/AirAsia.png" alt="" width="30%">
-            <p class="font-sm mt-3">FN-003</p>
+            <p class="font-lg font-bold">{{ $ticket->airline->name }}</p>
+              <img src="../assets/flights/{{ $ticket->airline->logo }}" alt="" width="40%">
           </div>
           <div class="flex-grow-2 mx-3">
-            <p class="font-md font-bold">Thursday, 2 June 2022</p>
+            <p class="font-md font-bold">{{ date("l, d M Y", strtotime($ticket->departure_date)) }}</p>
             <div>
       
             </div>
             <div class="d-flex mb-3">
               <div class="col-sm-1 justify-content-start me-5">
-                <p class="fs-2 font-bold">16.30</p>
+                <p class="fs-2 font-bold">{{ substr($ticket->departure_time, 0, -3) }}</p>
               </div> 
               <div class="ms-5">
-                <p class="font-bold">Jakarta (JKT)</p>
-                <p class="font-sm mt-0">Soekarno Hatta International Airport</p>
+                <p class="font-bold">{{ $ticket->source_cities->source_city_name }}</p>
+                <p class="font-sm mt-0">{{ $ticket->source_cities->source_city_airport }}</p>
               </div>
             </div>
             <div class="d-flex">
               <div class="col-sm-1 justify-content-start me-5">
-                <p class="fs-2 font-bold">18.20</p>
+                <p class="fs-2 font-bold">{{ substr($ticket->arrive_time, 0, -3) }}</p>
               </div>
               <div class="ms-5">
-                <p class="font-bold">Tokyo (TKY)</p>
-                <p class="font-sm mt-0">Haneda International Airport</p>
+                <p class="font-bold">{{ $ticket->dest_cities->dest_city_name }}</p>
+                <p class="font-sm mt-0">{{ $ticket->dest_cities->dest_city_airport }}</p>
               </div>
             </div>
           </div>
           <div>
             <p class="font-lg font-bold mx-3">Ticket Code</p>
-            <h2 class="font-lg font-bold" style="color: var(--red-color);">T-01231</h2>
+            <h2 class="font-lg font-bold" style="color: var(--red-color);">{{ $ticket->ticket_code }}</h2>
           </div>
         </div>
         <hr class="border-3">
@@ -73,14 +72,8 @@
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td>Agustinus Frinsen Farrelino Yoses</td>
-                  <td>FN-003</td>
-                  <td>20kg</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Joshua Adrian Maulana Ronaldy</td>
-                  <td>FN-003</td>
+                  <td>{{ $ticket->passenger_name }}</td>
+                  <td>{{ $ticket->flight_number }}</td>
                   <td>20kg</td>
                 </tr>
               </tbody>
