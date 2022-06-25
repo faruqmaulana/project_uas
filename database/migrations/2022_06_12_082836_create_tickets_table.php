@@ -24,7 +24,7 @@ return new class extends Migration
             $table->time('departure_time');
             $table->date('arive_date');
             $table->time('arive_time');
-            $table->string('passanger_name');
+            $table->string('passenger_name');
             $table->string('flight_number');
             $table->timestamps();
         });

@@ -26,6 +26,7 @@ class OrderController extends Controller
         $arrive_date_selected = $request->arrive_date;
         $arrive_time_selected = $request->arrive_time;
         $price_selected = $request->price;
+        $url = $request->url;
 
         if (Auth::check() == false) {
             return redirect('/login')->with('info', 'Please login first');
@@ -41,7 +42,8 @@ class OrderController extends Controller
             'departure_time_selected' => $departure_time_selected,
             'arrive_date_selected' => $arrive_date_selected,
             'arrive_time_selected' => $arrive_time_selected,
-            'price_selected' => $price_selected
+            'price_selected' => $price_selected,
+            'url' => $url
         ]);
     }
 
@@ -101,6 +103,19 @@ class OrderController extends Controller
     public function eTicketCreate(Request $request)
     {
         // dd($request->passenger_name);
+        Ticket::create([
+            'user_id', auth()->user()->id,
+            'source_city_id' => $request->source_city_id,
+            'dest_city_id' => $request->dest_city_id,
+            'airline_city_id' => $request->airline_city_id,
+            'ticket_code' => $request->ticket_code,
+            'departure_date' => $request->departure_date,
+            'departure_time' => $request->departure_time,
+            'arive_date' => $request->arive_date,
+            'arive_time' => $request->arive_time,
+            'passenger_name' => $request->passenger_name,
+            'flight_number' => $request->flight_number
+        ]);
     }
 
 

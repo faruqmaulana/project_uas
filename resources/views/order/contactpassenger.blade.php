@@ -31,7 +31,7 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="inputCitizen" class="font-sm font-bold">Citizen Number</label>
-                                    <input type="text" class="form-control" id="citizenNumber" name="passenger_citizen_id">
+                                    <input type="text" class="form-control" id="citizenNumber" name="passenger_citizen_id" value="{{ auth()->user()->citizen_id }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputNationality" class="font-sm font-bold">Nationality</label>
@@ -56,7 +56,7 @@
                 </div>
             </form>
             <div class="d-flex justify-content-start">  
-                <a href="{{ url('/flight') }}">
+                <a href="{{ url($url) }}">
                     <button class="btn btn-red nav-fonts font-white font-bold mt-5">CANCEL</button>
                 </a> 
             </div> 
