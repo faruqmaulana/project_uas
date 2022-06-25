@@ -36,6 +36,6 @@ class TicketController extends Controller
     {
         Ticket::find($id)->delete();
 
-        return redirect('/my-ticket');
+        return redirect('/my-ticket')->with('delete', 'Your ticket has been successfully deleted!');
     }
 }

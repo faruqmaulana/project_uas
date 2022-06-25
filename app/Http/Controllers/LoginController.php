@@ -43,7 +43,7 @@ class LoginController extends Controller
             return redirect()->intended('/my-profile');
         }
  
-        return back()->with('LoginError', 'Login Gagal!');
+        return back()->with('LoginError', 'Login failed!');
     }
 
     public function logout(Request $request){

@@ -75,7 +75,7 @@
                                                         </a>
                                                     </div>
                                                     <div class="col" style="margin-left: 5px;">
-                                                        <h5 style="font-size: 24px">Daftar</h5>
+                                                        <h5 style="font-size: 24px">Registrasi</h5>
                                                     </div>
                                                 </div>
                                             </div>

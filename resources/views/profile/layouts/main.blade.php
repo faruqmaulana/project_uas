@@ -13,7 +13,7 @@
     <div class="mb-5">
         @include('profile.partials.profileNav')
     </div>
-    @include('partials.footer')
+    @include('profile.partials.footer')
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
@@ -99,6 +99,27 @@
       })
     </script>
 
+    <!-- confirm delete -->
+    <script>
+      $('.delete-data').click(function(event){
+        var form = $(this).closest("#deleteSubmit");
+        event.preventDefault();
+        Swal.fire({
+          title: 'Are you sure you want to delete this ticket record?',
+          text: "If you delete this, it will be gone forever.",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#ed1f24',
+          confirmButtonText: 'Yes'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            form.submit();
+          }
+        })
+      })
+    </script>
+
     @error('username')
     <script>
       $(setTimeout(() => { 
@@ -137,6 +158,19 @@
           timer: 2000
         })
       }, 200));
+      </script>
+    @endif
+
+    @if(session()->has('delete'))
+    <script>
+      $( 
+          Swal.fire({
+          icon: 'success',
+          title: 'Delete successfully!',
+          text: '{{ Session::get("delete") }}',
+          showConfirmButton: false,
+          timer: 2000
+        }));
       </script>
     @endif
 

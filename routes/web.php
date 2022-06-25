@@ -83,13 +83,13 @@ Route::get('/registrasi', function () {
   return view('daftar');
 });
 
-Route::get('/my-ticket', [TicketController::class, 'index']);
-Route::get('/my-ticket/{ticket:id}', [TicketController::class, 'show']);
-Route::delete('/my-ticket/{ticket:id}/delete', [TicketController::class, 'destroy']);
+Route::get('/my-ticket', [TicketController::class, 'index'])->middleware('auth');
+Route::get('/my-ticket/{ticket:id}', [TicketController::class, 'show'])->middleware('auth');
+Route::delete('/my-ticket/{ticket:id}/delete', [TicketController::class, 'destroy'])->middleware('auth');
 
-Route::get('/my-profile', [ProfileController::class, 'index']);
-Route::put('/my-profile', [ProfileController::class, 'updateProfile']);
+Route::get('/my-profile', [ProfileController::class, 'index'])->middleware('auth');
+Route::put('/my-profile', [ProfileController::class, 'updateProfile'])->middleware('auth');
 
 
-Route::get('/my-profile-setting', [ProfileController::class, 'profileSetting']);
-Route::put('/my-profile-setting', [ProfileController::class, 'updateProfileSetting']);
+Route::get('/my-profile-setting', [ProfileController::class, 'profileSetting'])->middleware('auth');
+Route::put('/my-profile-setting', [ProfileController::class, 'updateProfileSetting'])->middleware('auth');

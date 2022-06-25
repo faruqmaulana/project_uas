@@ -27,6 +27,7 @@
     
                 <div class="col d-flex flex-column" >              
                   <p class="my-auto mb-4">
+                  {{ $ticket->id }}
                     <span class="fw-bold">Airlines</span> <br>
                     <small> {{ $ticket->airline->name }}</small>
                   </p>
@@ -65,9 +66,10 @@
             </div>
           </div>
           <div class="col-1 my-auto" style="width: 1rem">
-            <form action="{{ url('/my-ticket/'. $ticket->id .'/delete') }}" method="POST">
+            <form id="deleteSubmit" action="{{ url('/my-ticket/'. $ticket->id .'/delete') }}" method="POST">
               @csrf
-              <button type="submit" class="btn btn-primary-outline" value="Delete">
+              <input name="_method" type="hidden" value="DELETE">
+              <button type="submit" class="btn btn-primary-outline delete-data">
                 <img src="assets/my-ticket/trash.png" style="width: 30px"  alt="" class="align-self-center trash-btn">          
               </button>
             </form>
