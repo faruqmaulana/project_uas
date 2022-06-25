@@ -15,8 +15,17 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('source_city_id');
+            $table->foreignId('dest_city_id');
+            $table->foreignId('airline_city_id');
             $table->string('ticket_code');
-            $table->dateTime('jadwal');
+            $table->date('departure_date');
+            $table->time('departure_time');
+            $table->date('arive_date');
+            $table->time('arive_time');
+            $table->string('passanger_name');
+            $table->string('flight_number');
+            $table->string('ticket_code');
             $table->timestamps();
         });
     }
