@@ -6,6 +6,7 @@ use App\Models\Airline;
 use App\Models\ClassFlight;
 use App\Models\SourceCity;
 use App\Models\DestCity;
+use App\Models\Ticket;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -99,7 +100,20 @@ class OrderController extends Controller
 
     public function eTicketCreate(Request $request)
     {
-        dd($request->passenger_name);
+        // dd($request->passenger_name);
+        Ticket::create([
+            'user_id', auth()->user()->id,
+            'source_city_id' => $request->source_city_id,
+            'dest_city_id' => $request->dest_city_id,
+            'airline_city_id' => $request->airline_city_id,
+            'ticket_code' => $request->ticket_code,
+            'departure_date' => $request->departure_date,
+            'departure_time' => $request->departure_time,
+            'arive_date' => $request->arive_date,
+            'arive_time' => $request->arive_time,
+            'passenger_name' => $request->passenger_name,
+            'flight_number' => $request->flight_number
+        ]);
     }
 
 
