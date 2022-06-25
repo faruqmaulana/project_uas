@@ -42,7 +42,8 @@ class ProfileController extends Controller
             'username' => ['required'],
         ]);
         $validatedData['citizen_id'] = $request->citizen_id;
-
+        $validatedData['nationality'] = $request->nationality;
+        
         USER::where('id', $request->id)->update($validatedData);
 
         return back()->with('updateSuccess', 'Your profile has been updated!');

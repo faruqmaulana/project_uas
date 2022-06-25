@@ -31,6 +31,10 @@
           <label class="form-label">Citizen ID</label>
           <input name="citizen_id" type="text" class="form-control" value="{{ auth()->user()->citizen_id }}">
         </div>
+        <div class="mb-3">
+          <label class="form-label">Nationality</label>
+          <input name="nationality" type="text" class="form-control" value="{{ auth()->user()->nationality }}">
+        </div>
         <div class="d-flex justify-content-end pt-2">
           <button id="process" type="submit" class="btn btn-red font-md font-white font-bold update-data" style="width: 197px;">Simpan</button>
         </div>
