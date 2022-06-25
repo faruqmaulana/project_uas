@@ -60,7 +60,6 @@
               <div class="card-body px-4">
                 <div class="row">
 
-                  {{-- <form action="" method="GET" class="d-inline"> --}}
                     <div class="col my-auto">
                       <div class="row">
                         <div class="col">
@@ -116,11 +115,21 @@
                           <p class="h2 fw-bold">${{ $dat->price }}</p>
                         </div>
                         <div class="col ">
-                          <button href="#" type="submit" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</button>
+                            <form action="/order" method="GET" class="d-inline">
+                              <input type="hidden" value="{{ $dat->airline_id }}" name="airline_id">
+                              <input type="hidden" value="{{ $dat->class_flight_id }}" name="class_flight_id">
+                              <input type="hidden" value="{{ $dat->source_city_id }}" name="source_city_id">
+                              <input type="hidden" value="{{ $dat->dest_city_id }}" name="dest_city_id">
+                              <input type="hidden" value="{{ $dat->departure_date }}" name="departure_date">
+                              <input type="hidden" value="{{ $dat->departure_time }}" name="departure_time">
+                              <input type="hidden" value="{{ $dat->arrive_date }}" name="arrive_date">
+                              <input type="hidden" value="{{ $dat->arrive_time }}" name="arrive_time">
+                              <input type="hidden" value="{{ $dat->price }}" name="price">
+                            <button type="submit" class=" rounded-pill btn-md btn btn-outline-danger px-4 my-auto" tabindex="-1" role="button" aria-disabled="true" style="btn:hover{color: var(--white-color)}; width:120px">SELECT</button>
+                          </form>
                         </div>                    
                       </div>
                     </div>
-                  {{-- </form> --}}
 
                 </div>
               </div>

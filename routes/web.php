@@ -5,6 +5,7 @@ use App\Http\Controllers\DataController;
 use App\Http\Controllers\FlightController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Models\ClassFlight;
 use App\Models\DestCity;
@@ -28,10 +29,13 @@ Route::get('/',  function () {
   ]);
 });
 
+//flight search and filter
+
 Route::get('/flight', [FlightController::class, 'search']);
 
 Route::get('/flight/flight-search', [FlightController::class, 'filter']);
-// Route::get('/flight/flight-search', [FlightController::class, 'index']);
+
+//end of flight search and filter
 
 Route::get('/about', function () {
   return view('about', [
@@ -47,16 +51,17 @@ Route::get('/flightsearch', function () {
   ]);
 });
 
+//order section
 
-Route::get('/order', function () {
-  return view('order.contactpassanger', [
-    'active' => 'Order'
-  ]);
-});
+Route::get('/order', [OrderController::class, 'inputContact'])->middleware('auth');
+Route::get('/order/review', [OrderController::class, 'orderReview'])->middleware('auth');
+Route::get('/order/review/eticket', [OrderController::class, 'eTicket'])->middleware('auth');
+
+//end of order section
 
 // Login route
 
-Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'checkEmail'])->middleware('guest');
 
 Route::get('/login-password', [LoginController::class, 'passwordLogin']);
@@ -74,13 +79,6 @@ Route::post('/registrasi', [RegisterController::class, 'store']);
 // End of register route
 Route::get('/registrasi', function () {
   return view('daftar');
-});
-
-Route::get('/order/eticket', function () {
-  return view('order.eticket');
-});
-Route::get('/order/review', function () {
-  return view('order.review');
 });
 
 Route::get('/my-ticket', function () {

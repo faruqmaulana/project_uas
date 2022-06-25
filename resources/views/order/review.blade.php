@@ -84,7 +84,7 @@
         <!-- end Passenger Detail -->
 
         <div class="d-flex justify-content-start my-5">
-          <a href="#">
+          <a href="{{ url()->previous() }}">
             <img src="../assets/review/arrow-left.png" width="12px" alt="" class="d-inline">
             <p class="d-inline fw-bold ps-3">GO BACK</p>
           </a>

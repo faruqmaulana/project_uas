@@ -19,12 +19,17 @@ class FlightRouteFactory extends Factory
     {
         $hours = rand(1, 5);
         $startingDate = $this->faker->dateTimeBetween('next Monday', 'next Monday +10 days');
-        $endingDate   = $this->faker->dateTimeBetween($startingDate, $startingDate->format('Y-m-d H:i:s') . ' +2' . $hours  . ' hours');
+        $endingDate   = $this->faker->dateTimeBetween($startingDate, $startingDate->format('Y-m-d H:i:s') . ' +' . $hours  . ' hours');
+
+        $source_city_id = mt_rand(1, 10);
+        do {
+            $dest_city_id = mt_rand(1, 10);
+        } while (in_array($dest_city_id, array($source_city_id)));
 
         return [
             'airline_id' => mt_rand(1, 11),
-            'source_city_id' => mt_rand(1, 10),
-            'dest_city_id' => mt_rand(1, 10),
+            'source_city_id' => $source_city_id,
+            'dest_city_id' => $dest_city_id,
             'departure_date' => $startingDate->format('Y-m-d'),
             'departure_time' => $startingDate->format('H:i:s'),
             'arrive_date' => $endingDate->format('Y-m-d'),

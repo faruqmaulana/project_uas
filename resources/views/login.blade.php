@@ -5,6 +5,7 @@ if(session()->has('loginError')){
 
 ?>
 
+{{-- {{ dd(session()->has('info')) }} --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +25,11 @@ if(session()->has('loginError')){
             </div>
         </div>
         <div class="container">
+            @if(session()->has('info'))
+            <div class="col-5 offset-8 alert alert-info alert-dismissible fade show" role="alert" style="width: 37%; margin-bottom: -50px;">
+                {{ session('info') }}
+            </div>
+            @endif
             @if(session()->has('success'))
             <div class="col-5 offset-8 alert alert-success alert-dismissible fade show" role="alert" style="width: 37%; margin-bottom: -50px;">
                 {{ session('success') }}
