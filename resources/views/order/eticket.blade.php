@@ -20,7 +20,7 @@
         </div> 
         <div class="ms-5">
           <p class="font-bold">{{ $data_ticket[0]->source_cities->source_city_name }}</p>
-          <p class="font-sm mt-0">Soekarno Hatta International Airport</p>
+          <p class="font-sm mt-0">{{ $data_ticket[0]->source_cities->source_city_airport }}</p>
         </div>
       </div>
       <div class="d-flex">
@@ -29,7 +29,7 @@
         </div>
         <div class="ms-5">
           <p class="font-bold">{{ $data_ticket[0]->dest_cities->dest_city_name }}</p>
-          <p class="font-sm mt-0">Haneda International Airport</p>
+          <p class="font-sm mt-0">{{ $data_ticket[0]->dest_cities->dest_city_airport }}</p>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
   </div>
 
   <div class="d-flex justify-content-center mt-5">
-    <a href="">
+    <a href="/my-ticket">
       <button class="btn btn-red font-md font-white font-bold btn-search d-flex align-items-center justify-content-center">
         <span style="padding-left: 10px">
             GO TO MY TICKET

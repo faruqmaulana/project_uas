@@ -116,6 +116,7 @@ class OrderController extends Controller
             'source_city_id' => $request->source_city_selected,
             'dest_city_id' => $request->dest_city_selected,
             'airline_id' => $request->airline_selected,
+            'class_flight_id' => $request->class_flight_selected,
             'ticket_code' => $ticket_random,
             'departure_date' => $request->departure_date_selected,
             'departure_time' => $request->departure_time_selected,

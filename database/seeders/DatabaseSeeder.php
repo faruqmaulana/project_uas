@@ -84,66 +84,86 @@ class DatabaseSeeder extends Seeder
 
         //seed source city
         SourceCity::create([
-            'source_city_name' => 'Tuban'
+            'source_city_name' => 'Surabaya',
+            'source_city_airport' => 'Juanda Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Balikpapan'
+            'source_city_name' => 'Makassar',
+            'source_city_airport' => 'Sultan Hassanudin Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Jakarta'
+            'source_city_name' => 'Jakarta',
+            'source_city_airport' => 'Soekarno-Hatta Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Lamongan'
+            'source_city_name' => 'Yogyakarta',
+            'source_city_airport' => 'Adisutjipto Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Bali'
+            'source_city_name' => 'Denpasar',
+            'source_city_airport' => 'I Gusti Ngurah Rai Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Yogyakarta'
+            'source_city_name' => 'Ambon',
+            'source_city_airport' => 'Pattimura Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Bandung'
+            'source_city_name' => 'Jayapura',
+            'source_city_airport' => 'Sentani Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Bekasi'
+            'source_city_name' => 'Balikpapan',
+            'source_city_airport' => 'Sultan Aji Muhammad Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Lombok'
+            'source_city_name' => 'Lombok',
+            'source_city_airport' => 'Lombok International Airport'
         ]);
         SourceCity::create([
-            'source_city_name' => 'Tangerang'
+            'source_city_name' => 'Manado',
+            'source_city_airport' => 'Sam Ratulangi Airport'
         ]);
 
         //seed destination city
         DestCity::create([
-            'dest_city_name' => 'Tuban'
+            'dest_city_name' => 'Surabaya',
+            'dest_city_airport' => 'Juanda Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Balikpapan'
+            'dest_city_name' => 'Makassar',
+            'dest_city_airport' => 'Sultan Hassanudin Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Jakarta'
+            'dest_city_name' => 'Jakarta',
+            'dest_city_airport' => 'Soekarno-Hatta Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Lamongan'
+            'dest_city_name' => 'Yogyakarta',
+            'dest_city_airport' => 'Adisutjipto Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Bali'
+            'dest_city_name' => 'Denpasar',
+            'dest_city_airport' => 'I Gusti Ngurah Rai Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Yogyakarta'
+            'dest_city_name' => 'Ambon',
+            'dest_city_airport' => 'Pattimura Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Bandung'
+            'dest_city_name' => 'Jayapura',
+            'dest_city_airport' => 'Sentani Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Bekasi'
+            'dest_city_name' => 'Balikpapan',
+            'dest_city_airport' => 'Sultan Aji Muhammad Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Lombok'
+            'dest_city_name' => 'Lombok',
+            'dest_city_airport' => 'Lombok International Airport'
         ]);
         DestCity::create([
-            'dest_city_name' => 'Tangerang'
+            'dest_city_name' => 'Manado',
+            'dest_city_airport' => 'Sam Ratulangi Airport'
         ]);
     }
 }
