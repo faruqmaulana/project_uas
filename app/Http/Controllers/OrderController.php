@@ -10,6 +10,7 @@ use App\Models\Ticket;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class OrderController extends Controller
 {
@@ -103,19 +104,29 @@ class OrderController extends Controller
     public function eTicketCreate(Request $request)
     {
         // dd($request->passenger_name);
+
+
+        $bytes = random_bytes(16);
+
+        $ticket_random = Str::random(6);
+        $flight_number_random = bin2hex($bytes);
+
         Ticket::create([
-            'user_id', auth()->user()->id,
-            'source_city_id' => $request->source_city_id,
-            'dest_city_id' => $request->dest_city_id,
-            'airline_city_id' => $request->airline_city_id,
-            'ticket_code' => $request->ticket_code,
-            'departure_date' => $request->departure_date,
-            'departure_time' => $request->departure_time,
-            'arive_date' => $request->arive_date,
-            'arive_time' => $request->arive_time,
+            'user_id' => auth()->user()->id,
+            'source_city_id' => $request->source_city_selected,
+            'dest_city_id' => $request->dest_city_selected,
+            'airline_id' => $request->airline_selected,
+            'class_flight_id' => $request->class_flight_selected,
+            'ticket_code' => $ticket_random,
+            'departure_date' => $request->departure_date_selected,
+            'departure_time' => $request->departure_time_selected,
+            'arrive_date' => $request->arrive_date_selected,
+            'arrive_time' => $request->arrive_time_selected,
             'passenger_name' => $request->passenger_name,
-            'flight_number' => $request->flight_number
+            'flight_number' => $flight_number_random
         ]);
+
+        return redirect('/order/eticket');
     }
 
 
@@ -123,8 +134,15 @@ class OrderController extends Controller
     {
         // dd($request->passenger_name);
 
+        // dd(Ticket::all());
+
+        $data = Ticket::where([
+            ['user_id', auth()->user()->id]
+        ])->latest()->get();
+
         return view('order.eticket', [
-            'active' => 'E-Ticket'
+            'active' => 'E-Ticket',
+            'data_ticket' => $data
         ]);
     }
 }

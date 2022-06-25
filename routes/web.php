@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TicketController;
 use App\Models\ClassFlight;
 use App\Models\DestCity;
 use App\Models\FlightRoute;
@@ -55,7 +56,7 @@ Route::get('/flightsearch', function () {
 
 Route::get('/order', [OrderController::class, 'inputContact'])->middleware('auth');
 Route::get('/order/review', [OrderController::class, 'orderReview'])->middleware('auth');
-Route::post('/order/eticket', [OrderController::class, 'eTicketCreate']);
+Route::post('/order/create', [OrderController::class, 'eTicketCreate']);
 Route::get('/order/eticket', [OrderController::class, 'eTicket'])->middleware('auth');
 
 //end of order section
@@ -82,12 +83,9 @@ Route::get('/registrasi', function () {
   return view('daftar');
 });
 
-Route::get('/my-ticket', function () {
-  return view('profile.my-ticket', [
-    'active' => 'Flight',
-    'tittle' => 'My Ticket'
-  ]);
-});
+Route::get('/my-ticket', [TicketController::class, 'index']);
+Route::get('/my-ticket/{ticket:id}', [TicketController::class, 'show']);
+Route::delete('/my-ticket/{ticket:id}/delete', [TicketController::class, 'destroy']);
 
 Route::get('/my-profile', [ProfileController::class, 'index']);
 Route::put('/my-profile', [ProfileController::class, 'updateProfile']);
@@ -97,12 +95,5 @@ Route::get('/my-profile-setting', function () {
   return view('profile.my-profile-setting', [
     'active' => 'Flight',
     'tittle' => 'My Profile'
-  ]);
-});
-
-Route::get('/my-ticket-detail', function () {
-  return view('profile.my-ticket-detail', [
-    'active' => 'Flight',
-    'tittle' => 'My Ticket'
   ]);
 });
