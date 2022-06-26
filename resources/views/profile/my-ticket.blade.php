@@ -27,7 +27,6 @@
     
                 <div class="col d-flex flex-column" >              
                   <p class="my-auto mb-4">
-                  {{ $ticket->id }}
                     <span class="fw-bold">Airlines</span> <br>
                     <small> {{ $ticket->airline->name }}</small>
                   </p>

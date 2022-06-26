@@ -41,7 +41,7 @@
                         <div class="card shadow border rounded-lg" style="background-color: #D9D9D9">       
                             <div class="card-body mt-2 mb-5 px-5">
                                 <div class="row py-3">
-                                    <h5>Gabung dan gunakan fitur mudahnya</h5>
+                                    <h5>Join and use its easy features</h5>
                                 </div>
                                 <div class="row border-bottom border-dark mt-1 mb-3">
                                     <div class="col-2 py-3">
@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="col">
                                         <h4 class="text-start" style="font-size: 16px">Smart Profile</h4>
-                                        <p style="font-size: 15">Pesan lebih cepat. Cukup dengan satu klik untuk lengkapi detail penumpang</p>
+                                        <p style="font-size: 15">Order faster. Just one click to complete passenger details.</p>
                                     </div>
                                 </div>
                                 <div class="row border-bottom border-dark mt-1 mb-3">
@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="col">
                                         <h4 class="text-start" style="font-size: 16px">Smart Pay</h4>
-                                        <p style="font-size: 15px">Tangani semua transaksi dan pembayaran dengan cepat dan aman.</p>
+                                        <p style="font-size: 15px">Handle all transactions and payments quickly and securely.</p>
                                     </div>
                                 </div>
                                 <div class="row border-bottom border-dark mb-5 mt-1 mb-3">
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="col">
                                         <h4 class="text-start" style="font-size: 16px">Smart Schedule</h4>
-                                        <p style="font-size: 15px">Mengurus semua pengajuan reschedule untuk pesananmu tanpa perlu repot.</p>
+                                        <p style="font-size: 15px">Take care of all rescheduling requests for your order without the hassle.</p>
                                     </div>
                                 </div>
                             </div>

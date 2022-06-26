@@ -49,7 +49,7 @@ if(session()->has('loginError')){
                         <div class="card shadow border rounded-lg" style="background-color: #D9D9D9">       
                             <div class="card-body mt-2 mb-5 px-5">
                                 <div class="row py-3">
-                                    <h5>Gabung dan gunakan fitur mudahnya</h5>
+                                    <h5>Join and use its easy features</h5>
                                 </div>
                                 <div class="row border-bottom border-dark mt-1 mb-3">
                                     <div class="col-2 py-3">
@@ -57,7 +57,7 @@ if(session()->has('loginError')){
                                     </div>
                                     <div class="col">
                                         <h4 class="text-start" style="font-size: 16px">Smart Profile</h4>
-                                        <p style="font-size: 15">Pesan lebih cepat. Cukup dengan satu klik untuk lengkapi detail penumpang</p>
+                                        <p style="font-size: 15">Order faster. Just one click to complete passenger details.</p>
                                     </div>
                                 </div>
                                 <div class="row border-bottom border-dark mt-1 mb-3">
@@ -66,7 +66,7 @@ if(session()->has('loginError')){
                                     </div>
                                     <div class="col">
                                         <h4 class="text-start" style="font-size: 16px">Smart Pay</h4>
-                                        <p style="font-size: 15px">Tangani semua transaksi dan pembayaran dengan cepat dan aman.</p>
+                                        <p style="font-size: 15px">Handle all transactions and payments quickly and securely.</p>
                                     </div>
                                 </div>
                                 <div class="row border-bottom border-dark mb-5 mt-1 mb-3">
@@ -75,7 +75,7 @@ if(session()->has('loginError')){
                                     </div>
                                     <div class="col">
                                         <h4 class="text-start" style="font-size: 16px">Smart Schedule</h4>
-                                        <p style="font-size: 15px">Mengurus semua pengajuan reschedule untuk pesananmu tanpa perlu repot.</p>
+                                        <p style="font-size: 15px">Take care of all rescheduling requests for your order without the hassle.</p>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@ if(session()->has('loginError')){
                                     <div class="row mb-5">
                                         <div class="col">
                                             <h5 style="font-size: 24px">Log in/Daftar</h5>
-                                            <p>Perjalanan serumu dimulai disini</p>
+                                            <p>Your exciting journey starts here</p>
                                         </div>
                                     </div>
                                     <form action="/login" method="POST">
@@ -108,7 +108,7 @@ if(session()->has('loginError')){
                                             <img src="assets/login/garis.png" alt="">
                                         </div>
                                         <div class="col-2">
-                                            <p class="text-start">atau</p>
+                                            <p class="text-start">or</p>
                                         </div>
                                         <div class="col-2">
                                             <img src="assets/login/garis.png" alt="">
@@ -121,7 +121,7 @@ if(session()->has('loginError')){
                                                     <img src="assets/login/apple.png" alt="">
                                                 </div>
                                                 <div class="col text-align-center">
-                                                    Masuk dengan apple
+                                                Sign in with apple
                                                 </div>
                                             </div>
                                         </button>
@@ -133,7 +133,7 @@ if(session()->has('loginError')){
                                                     <img src="assets/login/google.png" alt="">
                                                 </div>
                                                 <div class="col">
-                                                    Masuk dengan google
+                                                Sign in with google
                                                 </div>
                                             </div>
                                         </button>
@@ -145,7 +145,7 @@ if(session()->has('loginError')){
                                                     <img src="assets/login/facebook.png" alt="">
                                                 </div>
                                                 <div class="col">
-                                                    Masuk dengan facebook
+                                                Login with facebook
                                                 </div>
                                             </div>
                                         </button>

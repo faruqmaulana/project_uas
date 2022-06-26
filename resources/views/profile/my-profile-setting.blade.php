@@ -37,8 +37,8 @@
                         <i class="bi bi-eye-slash" id="togglePassword"></i>
                         <div class="d-flex justify-content-between mt-3">
                             <div>
-                                <input type="password" class="pass-btn" name="new_password" id="new_password" placeholder="New Password" style="width: 352px;"/>
-                                <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                <input type="password" class="pass-btn" name="new_password" id="pass" placeholder="New Password" style="width: 352px;"/>
+                                <i class="bi bi-eye-slash" id="togglePass"></i>
                             </div>
                             <button type="submit" class="btn btn-red font-md font-white font-bold update-password" style="width: 153px;">change</button>
                         </div>

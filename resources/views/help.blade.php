@@ -37,16 +37,20 @@
   <div class="container mt-5 px-5">
     <p class="title-section-primary">Feedback</p>
     <p class="title-section-secondary">Send Your Feedback Here</p>
-    <div class="row d-flex flex-column justify-content-center">
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 150px"></textarea><label for="floatingTextarea"></label>      
-      </div>
-      <div class="col d-flex flex-column align-items-end">
-        <div class="mt-4">
-          <button type="button" class="btn btn-red font-md font-white font-bold px-4">SEND</button>
-        </div> 
-      </div>
-    </div>      
+    <form action="/help" method="POST">
+    @csrf
+      <div class="row d-flex flex-column justify-content-center">
+        <div class="form-floating">
+          <textarea name="feedback" class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 150px"></textarea><label for="floatingTextarea"></label>      
+        </div>
+        <div class="col d-flex flex-column align-items-end">
+          <div class="mt-4">
+            <button type="submit" class="btn btn-red font-md font-white font-bold px-4">SEND</button>
+          </div> 
+        </div>
+      </div>  
+    </form>
+  </div>    
 </section>
 <!-- End Of Feedback Section -->
 

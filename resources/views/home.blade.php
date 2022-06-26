@@ -7,11 +7,11 @@
   <div class="jumbotron-box font-white">
     <div class="container">
       <h1 class="pt-5 font-bold jumbotron-font-title">Welcome to tiketku!</h1>
-      <p class="jumbotron-text-box nav-fonts mt-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <p class="jumbotron-text-box nav-fonts my-3">
+      The need for cheap airline tickets is always sought after by anyone who wants to fly comfortably, including you. Moreover, currently transportation using airplanes has been chosen because of the convenience and speed of travel time. If you are one of the prospective passengers who are looking for cheap airline tickets or promo plane tickets, it is very appropriate for you to buy cheap airline tickets through tiketku. We have partnered with dozens of the best domestic and international airlines to provide your dream flight. You can check the list of cheap flight tickets to various flight routes at tiketku. Booking airline tickets is also easier because the innovation from tiketku is always oriented to the satisfaction of all valuable customers like you. You can check the list of cheap airline tickets to various flight routes directly at tiketku.
       </p>
       <a href="/flight">
-        <button class="btn btn-red nav-fonts font-white font-bold mt-5">Book now</button>
+        <button class="btn btn-red nav-fonts font-white font-bold" style="margin-top: 65px;">Book now</button>
       </a>
     </div>
   </div>
@@ -62,22 +62,22 @@
     <p class="title-section-primary">Destination</p>
     <p class="title-section-secondary">Our Top Destination</p>
     <div class="destination-box d-flex flex-wrap justify-content-between">
-      <a href="" class="img">
+      <div href="#" class="img">
         <img src="assets/destinations/us.png" alt="" class="img-thumbnails">
         <p class="destination-font font-bold">U.S</p>
-      </a>
-      <a href="" class="img">
+      </div>
+      <div href="#" class="img">
         <img src="assets/destinations/france.png" alt="" class="img-thumbnails">
         <p class="destination-font font-bold">France</p>
-      </a>
-      <a href="" class="img">
+      </div>
+      <div href="#" class="img">
         <img src="assets/destinations/italy.png" alt="" class="img-thumbnails">
         <p class="destination-font font-bold">Italy</p>
-      </a>
-      <a href="" class="img">
+      </div>
+      <div href="#" class="img">
         <img src="assets/destinations/japan.png" alt="" class="img-thumbnails">
         <p class="destination-font font-bold">Japan</p>
-      </a>
+      </div>
     </div>
   </div>
 </section>

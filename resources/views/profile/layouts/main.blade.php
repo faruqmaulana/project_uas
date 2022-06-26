@@ -33,6 +33,20 @@
         });
     </script>
 
+<script>
+        const togglePass = document.querySelector("#togglePass");
+        const pass = document.querySelector("#pass");
+
+        togglePass.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = pass.getAttribute("type") === "password" ? "text" : "password";
+            pass.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+    </script>
+
     <!-- confirm button -->
     <script>
       $('.update-data').click(function(event){

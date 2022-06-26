@@ -10,9 +10,9 @@
             <img src="/assets/logo.png" class="about-logo mb-5" alt="plane-logo">
             <p class="title-section-primary" style="color: var(--black-color)">PT. Tiketku,inc.</p>
             <p class="font-sm text-justify mt-1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Ullamcorper a lacus vestibulum sed arcu non odio. A pellentesque sit amet porttitor eget dolor morbi non arcu. Lobortis elementum nibh tellus molestie nunc non blandit massa. Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Facilisis gravida neque convallis a cras semper auctor. Erat pellentesque adipiscing commodo elit at imperdiet dui. Tortor dignissim convallis aenean et. Malesuada proin libero nunc consequat interdum varius sit. Netus et malesuada fames ac turpis egestas maecenas. Morbi non arcu risus quis varius quam quisque id. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Ut tristique et egestas quis ipsum. Ipsum nunc aliquet bibendum enim facilisis. Amet cursus sit amet dictum sit amet. Faucibus vitae aliquet nec ullamcorper.
+            tiketku is the first online travel agent in Indonesia which was founded in 2011 and based in Jakarta, Indonesia. Our service takes advantage of the development of the digital world to make it easier for you to book promo airline tickets or check flight ticket prices from anywhere and anytime. We sell airline tickets online with a wide selection of airlines, such as airline tickets for AirAsia, Singapore Airlines, Qatar Airways, AirCanada, Japan Airlines, Malaysia Airlines, Cebu Pacific, Fly Emirates, United Airlines, Saudia Airlines, Turkish Airlines  and many more.
             </p>
-            <p class="font-sm text-justify">Dignissim cras tincidunt lobortis feugiat vivamus at. Enim diam vulputate ut pharetra sit amet aliquam id. Ut pharetra sit amet aliquam id. Quis auctor elit sed vulputate mi sit amet. Fermentum iaculis eu non diam phasellus vestibulum lorem. Purus sit amet luctus venenatis lectus magna fringilla. Nunc non blandit massa enim nec dui nunc mattis. A arcu cursus vitae congue. Eget mi proin sed libero enim sed faucibus turpis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Velit sed ullamcorper morbi tincidunt ornare massa eget. Commodo nulla facilisi nullam vehicula. Mauris pharetra et ultrices neque ornare aenean euismod elementum. Nibh sed pulvinar proin gravida hendrerit. Hendrerit gravida rutrum quisque non tellus orci. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus.</p>
+            <p class="font-sm text-justify">It's also very easy to order cheap airline tickets and promo plane tickets on tiket.com. All you have to do is go to the flight ticket booking page, then enter your choice of departure airport and destination airport. Also enter your departure date. If you want to get a cheaper PP flight ticket price with the Smart Trip feature, don't forget to activate the tick in the return flight date column. Finally, don't forget to enter the number of passengers who will be joining you to fly with you.</p>
         </div>
         <p class="title-section-primary pt-5" id="whyTicket">Why Tiketku?</p>
         <div class="row align-items-center pb-5">
@@ -58,7 +58,7 @@
                 </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body px-0">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                <div class="accordion-body px-0">You can go directly to the home page then press "book now".</div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -68,7 +68,7 @@
                 </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body px-0">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                <div class="accordion-body px-0">for the news feature, so far it has not been added regarding the ticket information you want to order.</div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -78,7 +78,7 @@
                 </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body px-0">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div class="accordion-body px-0">payment processing will run quickly and in less than 1 minute.</div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -88,7 +88,7 @@
                 </button>
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body px-0">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div class="accordion-body px-0">Of course, you can enter the help menu and then contact our contact support center list.</div>
                 </div>
             </div>
         </div>

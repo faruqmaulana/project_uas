@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\FlightController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -45,6 +46,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/help', [DataController::class, 'help']);
+Route::post('/help', [FeedbackController::class, 'sendFeedback'])->middleware('auth');
 
 Route::get('/flightsearch', function () {
   return view('flightSearch', [
