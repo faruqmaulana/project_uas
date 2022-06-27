@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="col-1 my-auto" style="width: 1rem">
-            <form id="deleteSubmit" action="{{ url('/my-ticket/'. $ticket->id .'/delete') }}" method="POST">
+            <form id="deleteSubmit" action="{{ url('https://your-ticket.herokuapp.com/my-ticket/'. $ticket->id .'/delete') }}" method="POST">
               @csrf
               <input name="_method" type="hidden" value="DELETE">
               <button type="submit" class="btn btn-primary-outline delete-data">
