@@ -48,12 +48,6 @@ Route::get('/about', function () {
 Route::get('/help', [DataController::class, 'help']);
 Route::post('/help', [FeedbackController::class, 'sendFeedback'])->middleware('auth');
 
-Route::get('/flightsearch', function () {
-  return view('flightSearch', [
-    'active' => 'Flight'
-  ]);
-});
-
 //order section
 
 Route::get('/order', [OrderController::class, 'inputContact'])->middleware('auth');

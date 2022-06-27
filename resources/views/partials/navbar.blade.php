@@ -18,7 +18,7 @@
             <a class="nav-link font-md font-regular {{$active === 'Home' ? 'active' : ''}}" href="/">HOME</a>
         </li> 
         <li class="nav-item">
-            <a class="nav-link font-md font-regular {{$active === 'Flight' ? 'active' : ''}}" href="/flight">FLIGHTS</a>
+            <a class="nav-link font-md font-regular {{$active === 'Flight' || $active === 'FlightSearch' ? 'active' : ''}}" href="/flight">FLIGHTS</a>
         </li>
         <li class="nav-item">
             <a class="nav-link font-md font-regular {{$active === 'About' ? 'active' : ''}}" href="/about">ABOUT</a>

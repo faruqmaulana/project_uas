@@ -61,7 +61,7 @@ class FlightController extends Controller
             'dst_selected' => $dst_selected,
             'date_selected' => $request->depart_date,
             'class_selected' => $class_selected,
-            'active' => 'Flight'
+            'active' => 'FlightSearch'
         ]);
     }
 
