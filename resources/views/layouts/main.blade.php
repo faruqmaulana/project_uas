@@ -1,5 +1,6 @@
 <?php
     $urlPath = $_SERVER["PHP_SELF"];
+    dd($_SERVER);
 ?>
 
 <!doctype html>

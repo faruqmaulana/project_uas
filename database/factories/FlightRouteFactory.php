@@ -18,7 +18,7 @@ class FlightRouteFactory extends Factory
     public function definition()
     {
         $hours = rand(1, 5);
-        $startingDate = $this->faker->dateTimeBetween('next Monday', 'next Monday +10 days');
+        $startingDate = $this->faker->dateTimeBetween('next Monday', 'next Monday +21 days');
         $endingDate   = $this->faker->dateTimeBetween($startingDate, $startingDate->format('Y-m-d H:i:s') . ' +' . $hours  . ' hours');
 
         $source_city_id = mt_rand(1, 10);
