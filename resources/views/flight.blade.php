@@ -62,7 +62,7 @@
             <img class="flight-icons" src="assets/flights/Singapore.png" alt="">
             <img class="flight-icons" src="assets/flights/Qatar.png" alt="">
             <img class="flight-icons" src="assets/flights/Canada.png" alt="">
-            <img class="flight-icons-japan" src="assets/flights/japan.png" alt="">
+            <img class="flight-icons-japan" src="assets/flights/Japan.png" alt="">
             <img class="flight-icons" src="assets/flights/Malaysia_Airlines.png" alt="">
             <img class="flight-icons" src="assets/flights/Cebu.png" alt="">
             <img class="flight-icons" src="assets/flights/Emirates.png" alt="">
