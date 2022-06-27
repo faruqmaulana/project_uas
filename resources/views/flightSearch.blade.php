@@ -2,6 +2,8 @@
 @section('container')
 <?php
 $urlPath = $_SERVER["REQUEST_URI"];
+
+dd($data);
 ?>
 
 
