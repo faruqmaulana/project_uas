@@ -1,5 +1,7 @@
 <?php
     $urlPath = $_SERVER["PHP_SELF"];
+    echo $urlPath;
+    dd($_SERVER);
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-success py-2 sticky-top bg-white shadow-sm">
