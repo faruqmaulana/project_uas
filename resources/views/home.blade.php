@@ -2,7 +2,7 @@
 @section('container')
 
 
-<!-- Jumbotron Section -->
+<!-- Jumbotron Sectionn -->
 <section>
   <div class="jumbotron-box font-white">
     <div class="container">
