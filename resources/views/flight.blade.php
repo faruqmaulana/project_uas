@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('container')
+<!-- test wsl on vsc -->
 
 <section>
     <div class="container px-5">
