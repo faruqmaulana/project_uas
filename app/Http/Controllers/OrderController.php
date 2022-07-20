@@ -106,7 +106,7 @@ class OrderController extends Controller
         // dd($request->passenger_name);
 
 
-        $bytes = random_bytes(16);
+        $bytes = random_bytes(12);
 
         $ticket_random = Str::random(6);
         $flight_number_random = bin2hex($bytes);
